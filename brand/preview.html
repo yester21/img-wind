@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>imgwind 로고</title>
+<style>
+  body { margin: 0; font-family: -apple-system, "Segoe UI", "Pretendard", sans-serif; background: #f5f5f7; color: #1d1d1f; }
+  main { max-width: 1000px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 22px; margin: 0; }
+  h2 { font-size: 13px; font-weight: 600; color: #6e6e73; margin: 32px 0 10px; }
+  .row { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+  .card { background: #fff; border-radius: 18px; padding: 36px 28px; display: flex; align-items: center; justify-content: center; gap: 24px; min-height: 110px; }
+  .card.dark { background: #0b1a33; } .card.blue { background: #0071e3; }
+  .card img { max-width: 100%; }
+  .h56 img { height: 56px; } .h40 img { height: 40px; }
+  .sizes { align-items: end; }
+  .hdr { background: rgba(255,255,255,.8); border-bottom: 1px solid #d2d2d7; height: 48px; padding: 0 20px; display: flex; align-items: center; gap: 24px; border-radius: 12px; }
+  .hdr img { height: 22px; }
+  .hdr nav { display: flex; gap: 20px; font-size: 13px; color: #6e6e73; }
+  .tab { display: inline-flex; align-items: center; gap: 8px; background: #fff; border-radius: 10px 10px 0 0; padding: 8px 14px; font-size: 12px; }
+</style>
+</head>
+<body><main>
+<h1>imgwind · 이미지윈드</h1>
+
+<h2>메인 로고 — 다국어 공통 (기본) / 한국어</h2>
+<div class="row h56">
+  <div class="card"><img src="imgwind-logo.svg" alt=""></div>
+  <div class="card"><img src="imgwind-logo-ko.svg" alt=""></div>
+</div>
+
+<h2>반전 · 단색</h2>
+<div class="row h40">
+  <div class="card dark"><img src="imgwind-logo-white.svg" alt=""></div>
+  <div class="card dark"><img src="imgwind-logo-ko-white.svg" alt=""></div>
+  <div class="card"><img src="imgwind-logo-mono.svg" alt=""></div>
+  <div class="card"><img src="imgwind-logo-ko-mono.svg" alt=""></div>
+</div>
+
+<h2>심볼 · 파비콘 크기</h2>
+<div class="row">
+  <div class="card sizes">
+    <img src="imgwind-symbol.svg" style="height:96px" alt="">
+    <img src="imgwind-symbol.svg" style="height:48px" alt="">
+    <img src="imgwind-symbol.svg" style="height:28px" alt="">
+  </div>
+  <div class="card sizes">
+    <img src="imgwind-favicon.svg" style="height:96px" alt="">
+    <img src="imgwind-favicon.svg" style="height:48px" alt="">
+    <img src="imgwind-favicon.svg" style="height:32px" alt="">
+    <img src="imgwind-favicon.svg" style="height:16px" alt="">
+  </div>
+  <div class="card blue"><img src="imgwind-symbol-white.svg" style="height:72px" alt=""></div>
+</div>
+
+<h2>적용 예시 — 헤더 (영문 / 일본어 / 한국어)</h2>
+<div class="hdr"><img src="imgwind-logo.svg" alt="imgwind"><nav><span>Compress</span><span>Resize</span><span>Convert</span><span>Remove BG</span></nav></div>
+<div style="height:8px"></div>
+<div class="hdr"><img src="imgwind-logo.svg" alt="imgwind"><nav><span>画像圧縮</span><span>リサイズ</span><span>形式変換</span><span>背景削除</span></nav></div>
+<div style="height:8px"></div>
+<div class="hdr"><img src="imgwind-logo-ko.svg" alt="이미지윈드"><nav><span>이미지 압축</span><span>크기 조절</span><span>포맷 변환</span><span>배경 제거</span></nav></div>
+<h2>브라우저 탭</h2>
+<span class="tab"><img src="imgwind-favicon.svg" style="height:16px" alt="">imgwind — 이미지 압축</span>
+</main></body>
+</html>

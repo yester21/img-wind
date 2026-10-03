@@ -1,0 +1,13 @@
+# 접두사 없는 구 URL → 기본 언어(ko) 경로 (정적 호스팅용)
+/all-in-one /ko/all-in-one 302
+/compress /ko/compress 302
+/convert /ko/convert 302
+/resize /ko/resize 302
+/to-pdf /ko/to-pdf 302
+/pdf-to-image /ko/pdf-to-image 302
+/crop /ko/crop 302
+/watermark /ko/watermark 302
+/mask /ko/mask 302
+/bg-remove /ko/bg-remove 302
+/ocr /ko/ocr 302
+/favicon /ko/favicon 302

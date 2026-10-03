@@ -1,0 +1,20 @@
+# img-tools systemd 유닛 (서버 /etc/systemd/system/img-tools.service 와 동일 사본)
+# 재배포 시 참조용. 서버에서 수정했으면 이 사본도 갱신할 것.
+[Unit]
+Description=img-tools (Next.js image tools)
+After=network.target
+
+[Service]
+Type=simple
+User=imgto7214
+Group=nogroup
+WorkingDirectory=/home/imgtools.seos.kr/app
+Environment=NODE_ENV=production
+Environment=PORT=3200
+Environment=HOSTNAME=127.0.0.1
+ExecStart=/usr/bin/npm start
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
