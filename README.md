@@ -167,9 +167,14 @@ img-tools/
   `NEXT_PUBLIC_SITE_URL=https://usepic.net`.
 - CF Pages 파일당 25MiB 제한 — ort는 WebGPU(jsep, wasm 28MB) 대신 `onnxruntime-web/wasm`
   빌드(`ort-wasm-simd-threaded.mjs`+`.wasm` 14MB)를 `/public/ort`에 둔다. 실행 공급자는 원래 `wasm`만 사용.
-- /blog 워드프레스: `workers/blog-proxy`(Worker 라우트 `usepic.net/blog*`)가 `/blog`·`/blog/*`만
-  WP 오리진(`wp.usepic.net`, 오리진에서도 /blog 하위 설치)으로 프록시. 공유 비밀 헤더
-  `X-Usepic-Proxy` + `wp-config-snippet.php`로 WP가 usepic.net으로 인식, WP 주소 `https://usepic.net/blog`.
+- 블로그(워드프레스, 다국어는 WPML): 주소는 도구와 같은 `/{언어}/blog/` 체계.
+  WP는 iwinv(49.247.206.163) CyberPanel 사이트 `wp.usepic.net` **루트**에 설치, WP 주소 `https://usepic.net`,
+  글 목록 페이지 slug `blog` + 고유주소 `/blog/%postname%/` → WPML 언어 디렉토리로 `/ko/blog/글`.
+  `workers/blog-proxy`가 `/{언어}/blog*`·`/{언어}/feed*`·`/blog*`·`/feed*`·`/wp-*`만 WP로 프록시(나머지는 Pages).
+  공유 비밀 헤더 `X-Usepic-Proxy` + `wp-config-snippet.php`로 WP가 usepic.net으로 인식, 오리진 직접 접근은 301.
+  관리자 `https://usepic.net/wp-admin`. 함정: OLS는 .htaccess 변경 후 `lswsctrl restart` 필요,
+  서버 CLI php엔 mysqli가 없어 wp-cli는 `/usr/local/lsws/lsphp84/bin/php /usr/bin/wp`로 실행.
+  WPML 언어 코드는 도구 경로(`zh`, `zh-TW`)와 맞출 것.
 
 ## 검증 기록
 

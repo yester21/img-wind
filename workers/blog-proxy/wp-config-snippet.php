@@ -9,7 +9,11 @@ define('USEPIC_PROXY_SECRET', 'CHANGE-ME');
 if (isset($_SERVER['HTTP_X_USEPIC_PROXY']) && hash_equals(USEPIC_PROXY_SECRET, $_SERVER['HTTP_X_USEPIC_PROXY'])) {
     $_SERVER['HTTP_HOST'] = 'usepic.net';
     $_SERVER['HTTPS'] = 'on';
+} elseif (PHP_SAPI !== 'cli' && ($_SERVER['HTTP_HOST'] ?? '') === 'wp.usepic.net') {
+    // 오리진 직접 접근은 공개 주소로 돌린다 (중복 색인 방지)
+    header('Location: https://usepic.net' . $_SERVER['REQUEST_URI'], true, 301);
+    exit;
 }
 
-define('WP_HOME', 'https://usepic.net/blog');
-define('WP_SITEURL', 'https://usepic.net/blog');
+define('WP_HOME', 'https://usepic.net');
+define('WP_SITEURL', 'https://usepic.net');

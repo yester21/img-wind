@@ -1,17 +1,23 @@
 /**
- * usepic.net/blog/* → 워드프레스 오리진 리버스 프록시.
- * 도구 페이지는 CF Pages(정적)가 서빙하고, /blog 경로만 이 Worker가 가로채 WP 서버로 넘긴다.
- * WP는 오리진에서도 /blog 하위에 설치되어 경로가 1:1로 대응한다.
+ * usepic.net 의 블로그 경로 → 워드프레스 오리진 리버스 프록시.
+ * 도구 페이지는 CF Pages(정적)가 서빙하고, 아래 경로만 이 Worker가 가로채 WP 서버로 넘긴다.
+ *   /{언어}/blog, /{언어}/blog/*   — WPML 언어 디렉토리 + 글 목록 페이지(slug blog)·고유주소 /blog/%postname%/
+ *   /{언어}/feed*, /blog*, /feed*  — 피드, WPML 도입 전·기본 언어 경로
+ *   /wp-*                          — 관리자·로그인·자산·REST API·사이트맵·크론
+ * WP는 오리진 루트에 설치되어 경로가 1:1로 대응한다(WP 주소 https://usepic.net).
  *
  * env.WP_ORIGIN      — 예: https://wp.usepic.net (wrangler.toml vars)
  * env.PROXY_SECRET   — wp-config.php 와 같은 값 (wrangler secret put PROXY_SECRET)
  */
+const LOCALES = ["ko", "en", "ja", "zh", "zh-TW", "id", "th", "ru"];
+const WP_PATH = new RegExp(`^/(?:(?:${LOCALES.join("|")})/)?(?:blog|feed)(?:/|$)|^/wp-`);
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    // 라우트 패턴(usepic.net/blog*)이 /blogxxx 도 잡으므로 /blog, /blog/... 만 프록시한다
-    if (url.pathname !== "/blog" && !url.pathname.startsWith("/blog/")) {
+    // 라우트 패턴은 접두사 매치라 /blogxxx 등도 잡힌다 — 정확히 해당하는 경로만 프록시
+    if (!WP_PATH.test(url.pathname)) {
       return fetch(request);
     }
 

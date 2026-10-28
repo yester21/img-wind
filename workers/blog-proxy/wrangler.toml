@@ -2,9 +2,27 @@ name = "usepic-blog-proxy"
 main = "src/index.js"
 compatibility_date = "2026-10-01"
 
-# CF Pages(usepic.net)보다 이 라우트가 우선한다 — /blog 경로만 WP로 분기
+# CF Pages(usepic.net)보다 이 라우트들이 우선한다 — 블로그·WP 경로만 WP로 분기 (src/index.js 와 목록을 맞춘다)
 routes = [
   { pattern = "usepic.net/blog*", zone_name = "usepic.net" },
+  { pattern = "usepic.net/feed*", zone_name = "usepic.net" },
+  { pattern = "usepic.net/wp-*", zone_name = "usepic.net" },
+  { pattern = "usepic.net/ko/blog*", zone_name = "usepic.net" },
+  { pattern = "usepic.net/ko/feed*", zone_name = "usepic.net" },
+  { pattern = "usepic.net/en/blog*", zone_name = "usepic.net" },
+  { pattern = "usepic.net/en/feed*", zone_name = "usepic.net" },
+  { pattern = "usepic.net/ja/blog*", zone_name = "usepic.net" },
+  { pattern = "usepic.net/ja/feed*", zone_name = "usepic.net" },
+  { pattern = "usepic.net/zh/blog*", zone_name = "usepic.net" },
+  { pattern = "usepic.net/zh/feed*", zone_name = "usepic.net" },
+  { pattern = "usepic.net/zh-TW/blog*", zone_name = "usepic.net" },
+  { pattern = "usepic.net/zh-TW/feed*", zone_name = "usepic.net" },
+  { pattern = "usepic.net/id/blog*", zone_name = "usepic.net" },
+  { pattern = "usepic.net/id/feed*", zone_name = "usepic.net" },
+  { pattern = "usepic.net/th/blog*", zone_name = "usepic.net" },
+  { pattern = "usepic.net/th/feed*", zone_name = "usepic.net" },
+  { pattern = "usepic.net/ru/blog*", zone_name = "usepic.net" },
+  { pattern = "usepic.net/ru/feed*", zone_name = "usepic.net" },
 ]
 
 [vars]
