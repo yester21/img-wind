@@ -174,7 +174,11 @@ img-tools/
   공유 비밀 헤더 `X-Usepic-Proxy` + `wp-config-snippet.php`로 WP가 usepic.net으로 인식, 오리진 직접 접근은 301.
   관리자 `https://usepic.net/wp-admin`. 함정: OLS는 .htaccess 변경 후 `lswsctrl restart` 필요,
   서버 CLI php엔 mysqli가 없어 wp-cli는 `/usr/local/lsws/lsphp84/bin/php /usr/bin/wp`로 실행.
-  WPML 언어 코드는 도구 경로(`zh`, `zh-TW`)와 맞출 것.
+  WPML(2026-10-28 설정): 기본 ko, 8개 언어, 디렉토리 방식+기본 언어도 디렉토리, 언어별 `blog` 페이지 번역(slug 동일).
+  중국어는 내부 코드 `zh-hans`/`zh-hant` 유지, URL 코드(`wp_icl_languages.display_code`)만 `zh`/`zh-TW` — 도구 경로와 일치.
+  번역은 WPML 자동번역(Translate Everything) **끔** — 한국어 원문을 Claude가 번역해 `scripts/wpml-add-translation.php`
+  (서버 사본 `/home/wp.usepic.net/tools/`)로 번역본 생성·갱신: `wp eval-file … <원본ID> <en|ja|zh-hans|zh-hant|id|th|ru> <json>`.
+  카테고리·태그는 언어별 번역 용어로, 대표 이미지는 공유. 미번역 글은 다른 언어 목록에 노출되지 않음.
 
 ## 검증 기록
 
