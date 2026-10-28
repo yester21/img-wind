@@ -179,6 +179,12 @@ img-tools/
   번역은 WPML 자동번역(Translate Everything) **끔** — 한국어 원문을 Claude가 번역해 `scripts/wpml-add-translation.php`
   (서버 사본 `/home/wp.usepic.net/tools/`)로 번역본 생성·갱신: `wp eval-file … <원본ID> <en|ja|zh-hans|zh-hant|id|th|ru> <json>`.
   카테고리·태그는 언어별 번역 용어로, 대표 이미지는 공유. 미번역 글은 다른 언어 목록에 노출되지 않음.
+- 블로그 SEO(2026-10-28): Yoast SEO(+WPML SEO) — Bricks 자체 SEO/OG 출력은 끔(중복 방지). 사이트맵은
+  `/sitemap_index.xml`(robots.txt에 도구 `/sitemap.xml`과 함께 등록, Worker가 `/sitemap_index.xml`·`/*-sitemap.xml` 프록시).
+  mu-plugin `usepic-seo.php`가 `/{언어}/blog` 밖 URL(WP 홈 = 실제로는 도구 페이지)과 page 사이트맵을 제외.
+  글이 0개면 Yoast 인덱스가 404 — 첫 글 발행 후 정상. 작성자·날짜 아카이브 끔.
+- 블로그 캐시: LiteSpeed Cache. 캐시 히트는 PHP를 안 거치므로 오리진 직접 접근 차단(301)은 `.htaccess` 최상단
+  `usepic origin guard`(X-Usepic-Proxy 비밀 헤더 검사)에서 처리 — 비밀값 변경 시 wp-config·.htaccess·Worker 세 곳.
 
 ## 검증 기록
 
