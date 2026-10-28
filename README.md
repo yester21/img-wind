@@ -163,8 +163,13 @@ img-tools/
   이전 Node 배포 기록: systemd `img-tools.service`(127.0.0.1:3200), OLS vhost
   `extprocessor imgtools-app` + `context /` proxy, 사본 scripts/deploy-img-tools.service ·
   deploy-ols-proxy.py.
-- /blog 워드프레스 병행 구조(사용자 확정 방향): CF Worker/Origin Rules로 `/blog/*`만
-  iwinv의 WP 오리진 분기, 도구는 정적 — WP 사이트 주소를 `https://도메인/blog`로 설정.
+- **도메인 usepic.net (2026-10-28)**: CF Pages 프로젝트를 GitHub(yester21/img-wind)에 연결,
+  `NEXT_PUBLIC_SITE_URL=https://usepic.net`.
+- CF Pages 파일당 25MiB 제한 — ort는 WebGPU(jsep, wasm 28MB) 대신 `onnxruntime-web/wasm`
+  빌드(`ort-wasm-simd-threaded.mjs`+`.wasm` 14MB)를 `/public/ort`에 둔다. 실행 공급자는 원래 `wasm`만 사용.
+- /blog 워드프레스: `workers/blog-proxy`(Worker 라우트 `usepic.net/blog*`)가 `/blog`·`/blog/*`만
+  WP 오리진(`wp.usepic.net`, 오리진에서도 /blog 하위 설치)으로 프록시. 공유 비밀 헤더
+  `X-Usepic-Proxy` + `wp-config-snippet.php`로 WP가 usepic.net으로 인식, WP 주소 `https://usepic.net/blog`.
 
 ## 검증 기록
 

@@ -3,7 +3,7 @@
  * 모델·WASM은 /public에 셀프호스팅되어 이미지가 서버로 전송되지 않는다.
  * 첫 실행 시 모델을 내려받아 세션을 캐시한다.
  */
-import * as ort from "onnxruntime-web";
+import * as ort from "onnxruntime-web/wasm"; // WebGPU(jsep) 빌드는 wasm 28MB — CF 25MiB 파일 제한 초과
 
 ort.env.wasm.wasmPaths = "/ort/";
 

@@ -1,0 +1,13 @@
+name = "usepic-blog-proxy"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+# CF Pages(usepic.net)보다 이 라우트가 우선한다 — /blog 경로만 WP로 분기
+routes = [
+  { pattern = "usepic.net/blog*", zone_name = "usepic.net" },
+]
+
+[vars]
+WP_ORIGIN = "https://wp.usepic.net"
+
+# PROXY_SECRET 은 `npx wrangler secret put PROXY_SECRET` 으로 등록 (저장소에 넣지 않는다)
