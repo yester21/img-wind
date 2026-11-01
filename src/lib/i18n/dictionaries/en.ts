@@ -5,6 +5,7 @@ const en: Dict = {
     titleDefault: "Usepic — Compress, Convert & Resize Images",
     desc: "Compress, convert and resize images right in your browser. No uploads, fully private, batch-process many files at once.",
   },
+  foot: {"tools":"Main tools","more":"More tools","about":"About","aboutLink":"About Usepic","blog":"Blog","contact":"Contact","privacy":"Privacy policy","rights":"© 2026 Usepic. All rights reserved."},
   footer: {
     notice: "Images are processed in your browser (on your computer) and never uploaded.",
     tagline: "Usepic — Free online image tools",

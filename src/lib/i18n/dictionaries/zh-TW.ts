@@ -5,6 +5,7 @@ const zhTW: Dict = {
     titleDefault: "Usepic — 圖片壓縮 · 格式轉換 · 尺寸調整",
     desc: "在瀏覽器中直接完成圖片壓縮、格式轉換與尺寸調整。檔案無需上傳，安全私密，支援批次處理。",
   },
+  foot: {"tools":"主要工具","more":"更多工具","about":"關於","aboutLink":"服務介紹","blog":"部落格","contact":"聯絡我們","privacy":"隱私權政策","rights":"© 2026 Usepic. All rights reserved."},
   footer: {
     notice: "圖片預設在瀏覽器（您的電腦）中處理，不會上傳到伺服器。",
     tagline: "Usepic — 免費線上圖片工具",

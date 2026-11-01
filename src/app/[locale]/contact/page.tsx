@@ -1,25 +1,42 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+import { contactContent } from "@/lib/i18n/contact";
+import type { Locale } from "@/lib/i18n/config";
+import { langAlternates } from "@/lib/i18n/config";
 
-export const metadata: Metadata = {
-  title: "문의하기",
-  description: "유스픽 서비스 문의, 버그 신고, 제휴 제안을 보내주세요.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = contactContent[(locale as Locale) in contactContent ? (locale as Locale) : "ko"];
+  return {
+    title: t.kicker,
+    description: t.sub,
+    alternates: { canonical: `/${locale}/contact`, languages: langAlternates("/contact") },
+  };
+}
 
-export default function ContactPage() {
+export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const l = (locale in contactContent ? locale : "ko") as Locale;
+  const t = contactContent[l];
+
   return (
     <div className="break-keep">
       <section className="pt-4 pb-10 text-center">
-        <p className="text-[14px] font-medium text-primary">문의하기</p>
-        <h1 className="mt-2 text-[40px] font-semibold tracking-tight text-ink">무엇이든 물어보세요</h1>
-        <p className="mt-3 text-[20px] leading-relaxed text-muted max-w-xl mx-auto">
-          서비스 이용, 버그 신고, 제휴 제안을 남겨주시면 확인 후 회신드리겠습니다.
-        </p>
+        <p className="text-[14px] font-medium text-primary">{t.kicker}</p>
+        <h1 className="mt-2 text-[40px] font-semibold tracking-tight text-ink">{t.title}</h1>
+        <p className="mt-3 text-[20px] leading-relaxed text-muted max-w-xl mx-auto">{t.sub}</p>
       </section>
       <div className="mx-auto max-w-2xl">
-        <ContactForm />
+        <ContactForm t={t} locale={l} />
         <p className="mt-5 text-center text-[14px] text-muted">
-          이미지 처리 관련 문의는 대부분 <a href="/ko/about#faq" className="text-primary hover:underline">자주 묻는 질문</a>에서 해결할 수 있습니다.
+          {t.faqText}{" "}
+          <a href={`/${l}/about#faq`} className="text-primary hover:underline">
+            {t.faqLink}
+          </a>
         </p>
       </div>
     </div>

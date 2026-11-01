@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import type { ContactText } from "@/lib/i18n/contact";
+import type { Locale } from "@/lib/i18n/config";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
-const SUBJECTS = ["서비스 문의", "버그 신고", "제휴·협업", "기타"];
-
-export default function ContactForm() {
+export default function ContactForm({ t, locale }: { t: ContactText; locale: Locale }) {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
 
@@ -25,19 +25,18 @@ export default function ContactForm() {
       agree: fd.get("agree") ? "1" : "",
     };
     try {
-      if (!payload.agree) throw new Error("개인정보 수집·이용에 동의해 주세요.");
+      if (!payload.agree) throw new Error(t.agreeError);
       const res = await fetch("/wp-json/usepic/v1/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-      const j = (await res.json().catch(() => ({}))) as { message?: string };
-      if (!res.ok) throw new Error(j?.message || "전송에 실패했습니다. 잠시 후 다시 시도해 주세요.");
+      if (!res.ok) throw new Error(t.defaultError);
       setStatus("sent");
       form.reset();
     } catch (err) {
       setStatus("error");
-      setError(err instanceof Error ? err.message : "전송에 실패했습니다.");
+      setError(err instanceof Error ? err.message : t.defaultError);
     }
   }
 
@@ -49,10 +48,10 @@ export default function ContactForm() {
             <path d="M20 6 9 17l-5-5" />
           </svg>
         </span>
-        <h2 className="mt-4 text-[20px] font-semibold text-ink">문의가 접수되었습니다</h2>
-        <p className="mt-2 text-[16px] text-muted">확인 후 입력하신 이메일로 회신드리겠습니다.</p>
+        <h2 className="mt-4 text-[20px] font-semibold text-ink">{t.successTitle}</h2>
+        <p className="mt-2 text-[16px] text-muted">{t.successDesc}</p>
         <button type="button" onClick={() => setStatus("idle")} className="btn-secondary mt-5 h-10 px-5 text-[14px]">
-          다시 보내기
+          {t.again}
         </button>
       </div>
     );
@@ -62,18 +61,18 @@ export default function ContactForm() {
     <form onSubmit={onSubmit} className="card border border-hairline/60 p-6 sm:p-8 space-y-5">
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block">
-          <span className="field-label">이름</span>
-          <input name="name" required maxLength={60} placeholder="홍길동" className="field w-full" />
+          <span className="field-label">{t.name}</span>
+          <input name="name" required maxLength={60} className="field w-full" />
         </label>
         <label className="block">
-          <span className="field-label">이메일</span>
+          <span className="field-label">{t.email}</span>
           <input name="email" type="email" required maxLength={120} placeholder="you@example.com" className="field w-full" />
         </label>
       </div>
       <label className="block">
-        <span className="field-label">문의 유형</span>
+        <span className="field-label">{t.type}</span>
         <select name="subject" className="field w-full">
-          {SUBJECTS.map((s) => (
+          {t.types.map((s) => (
             <option key={s} value={s}>
               {s}
             </option>
@@ -81,13 +80,12 @@ export default function ContactForm() {
         </select>
       </label>
       <label className="block">
-        <span className="field-label">문의 내용</span>
+        <span className="field-label">{t.message}</span>
         <textarea
           name="message"
           required
           maxLength={4000}
           rows={7}
-          placeholder="문의하실 내용을 자세히 적어주세요."
           className="w-full rounded-xl border border-hairline bg-surface px-3.5 py-3 text-[15px] text-ink outline-none transition-colors focus:border-primary"
         />
       </label>
@@ -95,16 +93,16 @@ export default function ContactForm() {
       <label className="flex items-start gap-2.5 text-[14px] text-muted">
         <input type="checkbox" name="agree" className="mt-0.5" />
         <span>
-          문의 응대를 위한 개인정보(이름·이메일) 수집·이용에 동의합니다. 자세한 내용은{" "}
-          <a href="/ko/privacy" className="text-primary hover:underline">
-            개인정보처리방침
+          {t.agreePrefix}
+          <a href={`/${locale}/privacy`} className="text-primary hover:underline">
+            {t.agreeLink}
           </a>
-          을 확인해 주세요.
+          {t.agreeSuffix}
         </span>
       </label>
       {status === "error" && <p className="text-[14px] text-negative">{error}</p>}
       <button type="submit" disabled={status === "sending"} className="btn-primary h-12 px-8 text-[16px] w-full sm:w-auto">
-        {status === "sending" ? "전송 중…" : "문의 보내기"}
+        {status === "sending" ? t.sending : t.submit}
       </button>
     </form>
   );

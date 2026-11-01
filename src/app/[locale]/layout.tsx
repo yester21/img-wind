@@ -97,30 +97,13 @@ export default async function LocaleLayout({
               />
             </nav>
             <div className="ml-auto flex items-center gap-1.5 lg:gap-3">
-              <a
-                href={`/${l}/about`}
-                className="hidden sm:inline-flex items-center whitespace-nowrap font-bold text-[16px] text-ink transition-colors hover:text-primary"
-              >
-                {d.navAbout}
-              </a>
-              {/* 블로그 — Next.js 밖(WP) 라우트라 Link 대신 전체 이동하는 a 태그 */}
-              <a
-                href={`/${l}/blog/`}
-                className="hidden sm:inline-flex items-center whitespace-nowrap font-bold text-[16px] text-ink transition-colors hover:text-primary"
-              >
-                {d.navBlog}
-              </a>
               <LocaleSwitcher locale={l} />
               <ThemeToggle />
               <HamburgerMenu
-                items={[
-                  { href: `/${l}/about`, label: d.navAbout },
-                  { href: `/${l}/blog/`, label: d.navBlog },
-                  ...[...MAIN, ...MORE].map((m) => ({
-                    href: `/${l}${m.href}`,
-                    label: m.label,
-                  })),
-                ]}
+                items={[...MAIN, ...MORE].map((m) => ({
+                  href: `/${l}${m.href}`,
+                  label: m.label,
+                }))}
                 ariaLabel={d.navMore}
               />
             </div>
@@ -130,79 +113,81 @@ export default async function LocaleLayout({
         <main className="flex-1 w-full max-w-4xl mx-auto px-5 py-10">{children}</main>
 
         <footer className="border-t border-hairline/60 mt-10">
-          {l === "ko" ? (
-            <div className="max-w-7xl mx-auto px-5 py-12">
-              <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
-                <div className="max-w-xs">
-                  <Link href={`/${l}`} className="inline-flex items-center" aria-label="유스픽">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/brand/imgwind-logo-ko.svg" alt="유스픽" className="h-8 w-auto logo-light" />
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/brand/imgwind-logo-ko-white.svg" alt="" aria-hidden className="h-8 w-auto logo-dark" />
-                  </Link>
-                  <p className="mt-4 text-[14px] text-muted leading-relaxed">{d.footer.notice}</p>
-                  <p className="mt-1.5 text-[14px] text-muted">{d.footer.tagline}</p>
+          <div className="max-w-7xl mx-auto px-5 py-12">
+            <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+              <div className="max-w-xs">
+                <Link href={`/${l}`} className="inline-flex items-center" aria-label={l === "ko" ? "유스픽" : "Usepic"}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={l === "ko" ? "/brand/imgwind-logo-ko.svg" : "/brand/imgwind-logo.svg"}
+                    alt={l === "ko" ? "유스픽" : "Usepic"}
+                    className="h-8 w-auto logo-light"
+                  />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={l === "ko" ? "/brand/imgwind-logo-ko-white.svg" : "/brand/imgwind-logo-white.svg"}
+                    alt=""
+                    aria-hidden
+                    className="h-8 w-auto logo-dark"
+                  />
+                </Link>
+                <p className="mt-4 text-[14px] text-muted leading-relaxed">{d.footer.notice}</p>
+                <p className="mt-1.5 text-[14px] text-muted">{d.footer.tagline}</p>
+              </div>
+              <div className="grid grid-cols-2 gap-x-12 gap-y-8 sm:grid-cols-3">
+                <div>
+                  <p className="text-[14px] font-semibold text-ink">{d.foot.tools}</p>
+                  <ul className="mt-3 space-y-2">
+                    {MAIN.map((m) => (
+                      <li key={m.href}>
+                        <Link href={`/${l}${m.href}`} className="text-[14px] text-muted transition-colors hover:text-primary">
+                          {m.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <div className="grid grid-cols-2 gap-x-12 gap-y-8 sm:grid-cols-3">
-                  <div>
-                    <p className="text-[14px] font-semibold text-ink">주요 도구</p>
-                    <ul className="mt-3 space-y-2">
-                      {MAIN.map((m) => (
-                        <li key={m.href}>
-                          <Link href={`/${l}${m.href}`} className="text-[14px] text-muted transition-colors hover:text-primary">
-                            {m.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <p className="text-[14px] font-semibold text-ink">더 많은 도구</p>
-                    <ul className="mt-3 space-y-2">
-                      {MORE.map((m) => (
-                        <li key={m.href}>
-                          <Link href={`/${l}${m.href}`} className="text-[14px] text-muted transition-colors hover:text-primary">
-                            {m.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <p className="text-[14px] font-semibold text-ink">소개</p>
-                    <ul className="mt-3 space-y-2">
-                      <li>
-                        <a href={`/${l}/about`} className="text-[14px] text-muted transition-colors hover:text-primary">
-                          서비스 소개
-                        </a>
+                <div>
+                  <p className="text-[14px] font-semibold text-ink">{d.foot.more}</p>
+                  <ul className="mt-3 space-y-2">
+                    {MORE.map((m) => (
+                      <li key={m.href}>
+                        <Link href={`/${l}${m.href}`} className="text-[14px] text-muted transition-colors hover:text-primary">
+                          {m.label}
+                        </Link>
                       </li>
-                      <li>
-                        <a href={`/${l}/blog/`} className="text-[14px] text-muted transition-colors hover:text-primary">
-                          블로그
-                        </a>
-                      </li>
-                      <li>
-                        <a href={`/${l}/contact`} className="text-[14px] text-muted transition-colors hover:text-primary">
-                          문의하기
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <p className="text-[14px] font-semibold text-ink">{d.foot.about}</p>
+                  <ul className="mt-3 space-y-2">
+                    <li>
+                      <a href={`/${l}/about`} className="text-[14px] text-muted transition-colors hover:text-primary">
+                        {d.foot.aboutLink}
+                      </a>
+                    </li>
+                    <li>
+                      <a href={`/${l}/blog/`} className="text-[14px] text-muted transition-colors hover:text-primary">
+                        {d.foot.blog}
+                      </a>
+                    </li>
+                    <li>
+                      <a href={`/${l}/contact`} className="text-[14px] text-muted transition-colors hover:text-primary">
+                        {d.foot.contact}
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-hairline/60 pt-6 text-[14px] text-muted">
-                <span>© 2026 유스픽(usepic). All rights reserved.</span>
-                <a href={`/${l}/privacy`} className="text-muted transition-colors hover:text-primary">
-                  개인정보처리방침
-                </a>
-              </div>
             </div>
-          ) : (
-            <div className="max-w-4xl mx-auto px-5 py-8 text-[14px] text-muted leading-relaxed">
-              <p>{d.footer.notice}</p>
-              <p className="mt-1.5">{d.footer.tagline}</p>
+            <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-hairline/60 pt-6 text-[14px] text-muted">
+              <span>{d.foot.rights}</span>
+              <a href={`/${l}/privacy`} className="text-muted transition-colors hover:text-primary">
+                {d.foot.privacy}
+              </a>
             </div>
-          )}
+          </div>
         </footer>
       </body>
     </html>

@@ -5,6 +5,7 @@ const id: Dict = {
     titleDefault: "Usepic — Kompresi · Konversi · Ubah Ukuran Gambar",
     desc: "Kompres, konversi, dan ubah ukuran gambar langsung di browser. Tanpa unggah, aman, dan bisa memproses banyak file sekaligus.",
   },
+  foot: {"tools":"Alat utama","more":"Alat lainnya","about":"Tentang","aboutLink":"Tentang layanan","blog":"Blog","contact":"Hubungi kami","privacy":"Kebijakan privasi","rights":"© 2026 Usepic. All rights reserved."},
   footer: {
     notice: "Gambar diproses di browser (komputer Anda) dan tidak dikirim ke server.",
     tagline: "Usepic — Alat gambar online gratis",
