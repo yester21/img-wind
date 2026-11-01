@@ -185,6 +185,8 @@ img-tools/
   글이 0개면 Yoast 인덱스가 404 — 첫 글 발행 후 정상. 작성자·날짜 아카이브 끔.
 - 블로그 캐시: LiteSpeed Cache. 캐시 히트는 PHP를 안 거치므로 오리진 직접 접근 차단(301)은 `.htaccess` 최상단
   `usepic origin guard`(X-Usepic-Proxy 비밀 헤더 검사)에서 처리 — 비밀값 변경 시 wp-config·.htaccess·Worker 세 곳.
+- WP 자기 검사 요청(파일 편집기 저장 시 wp_scrape_key, 사이트 상태 루프백)은 `https://usepic.net/`이 Pages라 실패한다 →
+  mu-plugin `usepic-loopback.php`가 해당 요청만 `wp.usepic.net`(127.0.0.1, 비밀 헤더)로 보낸다. 관리자 계정 `yester21`.
 
 ## 검증 기록
 
