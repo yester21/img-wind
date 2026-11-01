@@ -51,7 +51,7 @@ export default async function LocaleLayout({
   if (!isLocale(locale)) notFound();
   const l = locale as Locale;
   const d = getDictionary(l);
-  const logoSrc = l === "ko" ? "/brand/imgwind-logo-ko.svg" : "/brand/imgwind-logo.svg";
+  const logoSrc = l === "ko" ? "/brand/usepic-ko.svg" : "/brand/usepic-en.svg";
 
   const MAIN = [
     { href: "/all-in-one", label: d.allin.title },
@@ -81,7 +81,7 @@ export default async function LocaleLayout({
               <img src={logoSrc} alt={l === "ko" ? "유스픽" : "Usepic"} className="h-7 sm:h-8 w-auto logo-light" />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={l === "ko" ? "/brand/imgwind-logo-ko-white.svg" : "/brand/imgwind-logo-white.svg"}
+                src={l === "ko" ? "/brand/usepic-ko-white.svg" : "/brand/usepic-en-white.svg"}
                 alt=""
                 aria-hidden
                 className="h-7 sm:h-8 w-auto logo-dark"
@@ -119,13 +119,13 @@ export default async function LocaleLayout({
                 <Link href={`/${l}`} className="inline-flex items-center" aria-label={l === "ko" ? "유스픽" : "Usepic"}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={l === "ko" ? "/brand/imgwind-logo-ko.svg" : "/brand/imgwind-logo.svg"}
+                    src={l === "ko" ? "/brand/usepic-ko.svg" : "/brand/usepic-en.svg"}
                     alt={l === "ko" ? "유스픽" : "Usepic"}
                     className="h-8 w-auto logo-light"
                   />
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={l === "ko" ? "/brand/imgwind-logo-ko-white.svg" : "/brand/imgwind-logo-white.svg"}
+                    src={l === "ko" ? "/brand/usepic-ko-white.svg" : "/brand/usepic-en-white.svg"}
                     alt=""
                     aria-hidden
                     className="h-8 w-auto logo-dark"
