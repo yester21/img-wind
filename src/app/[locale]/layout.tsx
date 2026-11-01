@@ -169,7 +169,7 @@ export default async function LocaleLayout({
                     </ul>
                   </div>
                   <div>
-                    <p className="text-[14px] font-semibold text-ink">서비스</p>
+                    <p className="text-[14px] font-semibold text-ink">소개</p>
                     <ul className="mt-3 space-y-2">
                       <li>
                         <a href={`/${l}/about`} className="text-[14px] text-muted transition-colors hover:text-primary">
@@ -181,13 +181,20 @@ export default async function LocaleLayout({
                           블로그
                         </a>
                       </li>
+                      <li>
+                        <a href={`/${l}/contact`} className="text-[14px] text-muted transition-colors hover:text-primary">
+                          문의하기
+                        </a>
+                      </li>
                     </ul>
                   </div>
                 </div>
               </div>
               <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-hairline/60 pt-6 text-[14px] text-muted">
                 <span>© 2026 유스픽(usepic). All rights reserved.</span>
-                <span>이미지는 브라우저에서만 처리되며 서버로 전송되지 않습니다.</span>
+                <a href={`/${l}/privacy`} className="text-muted transition-colors hover:text-primary">
+                  개인정보처리방침
+                </a>
               </div>
             </div>
           ) : (
