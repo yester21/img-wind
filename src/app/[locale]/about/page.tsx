@@ -109,7 +109,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   const l = locale as Locale;
 
   return (
-    <div className="pb-6">
+    <div className="pb-6 break-keep">
       {/* HERO */}
       <section className="text-center pt-4 pb-16">
         <span className="inline-flex items-center gap-1.5 rounded-full border border-hairline/70 bg-surface px-3.5 h-8 text-[14px] font-medium text-primary">
