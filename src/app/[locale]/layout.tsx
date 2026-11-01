@@ -41,6 +41,12 @@ export async function generateMetadata({
       apple: "/favicon-180.png",
     },
     manifest: "/site.webmanifest",
+    verification: {
+      google: "FCSNAwsTuLBImdQVxPJcCKjbp0fxY9_Wof9mYm6lXq8",
+      other: {
+        "naver-site-verification": "e1bfcc1200cb692cf5a917e3bbeeebe623ee8634",
+      },
+    },
     openGraph: {
       type: "website",
       siteName: brandName(locale as Locale),
