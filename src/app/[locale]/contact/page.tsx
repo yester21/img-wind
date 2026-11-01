@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 import { contactContent } from "@/lib/i18n/contact";
 import type { Locale } from "@/lib/i18n/config";
-import { langAlternates } from "@/lib/i18n/config";
+import { pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -11,11 +11,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = contactContent[(locale as Locale) in contactContent ? (locale as Locale) : "ko"];
-  return {
-    title: t.kicker,
-    description: t.sub,
-    alternates: { canonical: `/${locale}/contact`, languages: langAlternates("/contact") },
-  };
+  return pageMetadata({ locale: locale as Locale, path: "/contact", title: t.kicker, description: t.sub });
 }
 
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { langAlternates, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n";
 import { aboutContent } from "@/lib/i18n/about";
+import { pageMetadata } from "@/lib/seo";
 import { TOOL_ACCENTS, TOOL_ICONS } from "@/components/toolIcons";
 
 export async function generateMetadata({
@@ -14,11 +15,7 @@ export async function generateMetadata({
   const l = (locale in aboutContent ? locale : "ko") as Locale;
   const c = aboutContent[l];
   const d = getDictionary(l);
-  return {
-    title: d.navAbout,
-    description: c.sub,
-    alternates: { canonical: `/${locale}/about`, languages: langAlternates("/about") },
-  };
+  return pageMetadata({ locale: l, path: "/about", title: d.navAbout, description: c.sub });
 }
 
 const TOOL_HREFS = [
@@ -69,8 +66,22 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
     "/favicon": d.fav,
   };
 
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": c.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <div className="pb-6 break-keep">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       {/* HERO */}
       <section className="text-center pt-4 pb-16">
         <span className="inline-flex items-center gap-1.5 rounded-full border border-hairline/70 bg-surface px-3.5 h-8 text-[14px] font-medium text-primary">

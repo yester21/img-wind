@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { langAlternates, isLocale, locales, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n";
+import { brandName, ogImageFor } from "@/lib/seo";
 import LocaleSwitcher from "@/components/LocaleSwitcher";
 import SiteNav from "@/components/SiteNav";
 import ToolsMenu from "@/components/ToolsMenu";
@@ -40,6 +41,21 @@ export async function generateMetadata({
       apple: "/favicon-180.png",
     },
     manifest: "/site.webmanifest",
+    openGraph: {
+      type: "website",
+      siteName: brandName(locale as Locale),
+      url: `https://usepic.net/${locale}`,
+      title: d.meta.titleDefault,
+      description: d.meta.desc,
+      locale: locale === "ko" ? "ko_KR" : undefined,
+      images: [{ url: ogImageFor(locale as Locale), width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: d.meta.titleDefault,
+      description: d.meta.desc,
+      images: [ogImageFor(locale as Locale)],
+    },
     alternates: { languages: langAlternates("") },
   };
 }
@@ -53,6 +69,27 @@ export default async function LocaleLayout({
   const l = locale as Locale;
   const d = getDictionary(l);
   const logoSrc = l === "ko" ? "/brand/usepic-ko.svg" : "/brand/usepic-en.svg";
+  const BASE = process.env.NEXT_PUBLIC_SITE_URL || "https://usepic.net";
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": `${BASE}/#organization`,
+        name: brandName(l),
+        url: `${BASE}/${l}`,
+        logo: `${BASE}${l === "ko" ? "/brand/usepic-ko.svg" : "/brand/usepic-en.svg"}`,
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${BASE}/#website`,
+        name: brandName(l),
+        url: `${BASE}/${l}`,
+        inLanguage: l,
+        publisher: { "@id": `${BASE}/#organization` },
+      },
+    ],
+  };
 
   const MAIN = [
     { href: "/all-in-one", label: d.allin.title },
@@ -75,6 +112,7 @@ export default async function LocaleLayout({
     <html lang={l} suppressHydrationWarning>
       <body className="min-h-screen flex flex-col">
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <header className="sticky top-0 z-40 bg-fog/80 backdrop-blur-md border-b border-hairline/60 py-4">
           <div className="max-w-7xl mx-auto px-5 flex items-center gap-6">
             <Link href={`/${l}`} className="shrink-0" aria-label={l === "ko" ? "유스픽" : "Usepic"}>

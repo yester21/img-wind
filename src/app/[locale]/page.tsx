@@ -2,7 +2,24 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { langAlternates, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n";
+import { pageMetadata } from "@/lib/seo";
 import { TOOL_ACCENTS, TOOL_ICONS } from "@/components/toolIcons";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const d = getDictionary(locale);
+  const meta = pageMetadata({
+    locale: locale as Locale,
+    path: "",
+    title: d.meta.titleDefault,
+    description: d.meta.desc,
+  });
+  return { ...meta, title: { absolute: d.meta.titleDefault } };
+}
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

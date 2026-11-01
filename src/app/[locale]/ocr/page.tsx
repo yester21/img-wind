@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import OcrTool from "@/components/OcrTool";
-import { langAlternates } from "@/lib/i18n/config";
+import { langAlternates, type Locale } from "@/lib/i18n/config";
+import { pageMetadata } from "@/lib/seo";
 import { getDictionary } from "@/lib/i18n";
 
 export async function generateMetadata({
@@ -10,11 +11,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const d = getDictionary(locale);
-  return {
+  return pageMetadata({
+    locale: locale as Locale,
+    path: "/ocr",
     title: d.ocr.title,
     description: d.ocr.desc,
-    alternates: { canonical: `/${locale}/ocr`, languages: langAlternates("/ocr") },
-  };
+  });
 }
 
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {

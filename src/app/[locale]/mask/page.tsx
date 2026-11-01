@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import MaskTool from "@/components/MaskTool";
-import { langAlternates } from "@/lib/i18n/config";
+import { langAlternates, type Locale } from "@/lib/i18n/config";
+import { pageMetadata } from "@/lib/seo";
 import { getDictionary } from "@/lib/i18n";
 
 export async function generateMetadata({
@@ -10,11 +11,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const d = getDictionary(locale);
-  return {
+  return pageMetadata({
+    locale: locale as Locale,
+    path: "/mask",
     title: d.maskT.title,
     description: d.maskT.desc,
-    alternates: { canonical: `/${locale}/mask`, languages: langAlternates("/mask") },
-  };
+  });
 }
 
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import FaviconTool from "@/components/FaviconTool";
-import { langAlternates } from "@/lib/i18n/config";
+import { langAlternates, type Locale } from "@/lib/i18n/config";
+import { pageMetadata } from "@/lib/seo";
 import { getDictionary } from "@/lib/i18n";
 
 export async function generateMetadata({
@@ -10,11 +11,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const d = getDictionary(locale);
-  return {
+  return pageMetadata({
+    locale: locale as Locale,
+    path: "/favicon",
     title: d.fav.title,
     description: d.fav.desc,
-    alternates: { canonical: `/${locale}/favicon`, languages: langAlternates("/favicon") },
-  };
+  });
 }
 
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {

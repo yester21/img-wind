@@ -7,6 +7,8 @@ const BASE = process.env.NEXT_PUBLIC_SITE_URL || "https://imgtools.seos.kr";
 const PATHS = [
   "",
   "/about",
+  "/contact",
+  "/privacy",
   "/all-in-one",
   "/compress",
   "/convert",

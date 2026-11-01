@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ToPdfTool from "@/components/ToPdfTool";
-import { langAlternates } from "@/lib/i18n/config";
+import { langAlternates, type Locale } from "@/lib/i18n/config";
+import { pageMetadata } from "@/lib/seo";
 import { getDictionary } from "@/lib/i18n";
 
 export async function generateMetadata({
@@ -10,11 +11,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const d = getDictionary(locale);
-  return {
+  return pageMetadata({
+    locale: locale as Locale,
+    path: "/to-pdf",
     title: d.topdf.title,
     description: d.topdf.desc,
-    alternates: { canonical: `/${locale}/to-pdf`, languages: langAlternates("/to-pdf") },
-  };
+  });
 }
 
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
