@@ -259,6 +259,7 @@ const ja: Dict = {
     removing: "除去中…",
     note: "初回実行時にAIモデル（約5MB）をダウンロードします。画像は送信されずブラウザ内で処理されます。",
   },
+  navBlog: "ブログ",
   navMore: "すべてのツール",
   lang: { label: "言語" },
 };

@@ -258,6 +258,7 @@ const ko = {
     removing: "제거 중…",
     note: "첫 실행에 AI 모델(약 5MB)을 내려받습니다. 이미지는 전송되지 않고 브라우저에서 처리됩니다.",
   },
+  navBlog: "블로그",
   navMore: "모든 도구",
   lang: { label: "언어" },
 };

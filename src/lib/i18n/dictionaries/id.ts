@@ -255,6 +255,7 @@ const id: Dict = {
     removing: "Menghapus…",
     note: "Jalankan pertama mengunduh model AI (~5MB). Gambar tetap di browser Anda.",
   },
+  navBlog: "Blog",
   navMore: "Semua alat",
   lang: { label: "Bahasa" },
 };

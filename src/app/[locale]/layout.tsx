@@ -97,13 +97,23 @@ export default async function LocaleLayout({
               />
             </nav>
             <div className="ml-auto flex items-center gap-1.5 lg:gap-3">
+              {/* 블로그 — Next.js 밖(WP) 라우트라 Link 대신 전체 이동하는 a 태그 */}
+              <a
+                href={`/${l}/blog/`}
+                className="hidden sm:inline-flex items-center whitespace-nowrap font-bold text-[16px] text-ink transition-colors hover:text-primary"
+              >
+                {d.navBlog}
+              </a>
               <LocaleSwitcher locale={l} />
               <ThemeToggle />
               <HamburgerMenu
-                items={[...MAIN, ...MORE].map((m) => ({
-                  href: `/${l}${m.href}`,
-                  label: m.label,
-                }))}
+                items={[
+                  { href: `/${l}/blog/`, label: d.navBlog },
+                  ...[...MAIN, ...MORE].map((m) => ({
+                    href: `/${l}${m.href}`,
+                    label: m.label,
+                  })),
+                ]}
                 ariaLabel={d.navMore}
               />
             </div>

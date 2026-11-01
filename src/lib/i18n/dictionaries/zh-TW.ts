@@ -255,6 +255,7 @@ const zhTW: Dict = {
     removing: "處理中…",
     note: "首次執行需下載 AI 模型（約 5MB）。圖片不會上傳，全部在瀏覽器中處理。",
   },
+  navBlog: "部落格",
   navMore: "全部工具",
   lang: { label: "語言" },
 };
