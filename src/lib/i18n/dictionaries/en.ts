@@ -259,6 +259,7 @@ const en: Dict = {
     removing: "Removing…",
     note: "The first run downloads an AI model (~5MB). Images stay in your browser.",
   },
+  navAbout: "About",
   navBlog: "Blog",
   navMore: "All tools",
   lang: { label: "Language" },

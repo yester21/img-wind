@@ -1,0 +1,97 @@
+=== ELEMENT: #brx-content class= tag=main
+<section>#brxe-uiay1t.brxe-section.dp-archive.bricks-lazy-hidden
+  <div>#brxe-5m7y9s.brxe-container.dp-wrap.dp-page.bricks-lazy-hidden
+    <h1>#brxe-yd2gvu.brxe-heading.dp-archive-title
+      "Think"
+    <p>#brxe-dba8vf.brxe-text-basic.dp-archive-intro
+    <p>
+      "비판적 사고, 브랜드 에스테틱, 통찰력을 다루는 칼럼"
+    <div>#brxe-d0k2be.brxe-block.dp-archive-bar.bricks-lazy-hidden
+      <p>#brxe-3avgat.brxe-text-basic.dp-archive-count
+        "전체 8개의 이야기"
+    <div>#brxe-43p845.brxe-block.dp-grid.bricks-lazy-hidden
+      <a>.brxe-69blb9.brxe-block.dp-card.bricks-lazy-hiddenhref=/price-basket/
+        <img>.brxe-bdd67o.brxe-image.dp-cover.css-filter.size-large.bricks-lazy-hiddensrc=data:svg-placeholderalt=물가는 내려갔다는데, 내 장바구니는 왜 그대로일까?w=1024 h=569
+        <div>.brxe-mgsdy9.brxe-block.dp-card-body.bricks-lazy-hidden
+          <p>.brxe-72lic7.brxe-text-basic.dp-card-cat
+            "Think"
+          <h2>.brxe-2bk6q0.brxe-heading.dp-card-title
+            "물가는 내려갔다는데, 내 장바구니는 왜 그대로일까?"
+          <p>.brxe-r8bloy.brxe-text-basic.dp-card-excerpt
+            "발표되는 물가 지수와 장바구니에서 직접 느끼는 체감 가격이 왜 이렇게 다르게 다가오는지, 그 간극이 생기는 이유와 지출을 점검하는 구체적인 방법을 차분하게 정리했습니다."
+          <div>.brxe-phwav0.brxe-block.dp-meta.bricks-lazy-hidden
+            <p>.brxe-evxwke.brxe-text-basic.dp-meta-item
+              "2026-10-07"
+      <a>.brxe-69blb9.brxe-block.dp-card.bricks-lazy-hiddenhref=/interest-rates-daily/
+        <img>.brxe-bdd67o.brxe-image.dp-cover.css-filter.size-large.bricks-lazy-hiddensrc=data:svg-placeholderalt=금리가 움직이면 우리 일상은 어떻게 달라질까?w=1024 h=569
+        <div>.brxe-mgsdy9.brxe-block.dp-card-body.bricks-lazy-hidden
+          <p>.brxe-72lic7.brxe-text-basic.dp-card-cat
+            "Think"
+          <h2>.brxe-2bk6q0.brxe-heading.dp-card-title
+            "금리가 움직이면 우리 일상은 어떻게 달라질까?"
+          <p>.brxe-r8bloy.brxe-text-basic.dp-card-excerpt
+            "금리가 오르고 내릴 때 예금과 대출, 물가와 고용이 어떤 순서로 영향을 받는지 일상의 언어로 풀어내고 지금 당장 확인해야 할 항목까지 함께 짚어 드립니다."
+          <div>.brxe-phwav0.brxe-block.dp-meta.bricks-lazy-hidden
+            <p>.brxe-evxwke.brxe-text-basic.dp-meta-item
+              "2026-10-06"
+      <a>.brxe-69blb9.brxe-block.dp-card.bricks-lazy-hiddenhref=/exchange-rate-basics/
+        <img>.brxe-bdd67o.brxe-image.dp-cover.css-filter.size-large.bricks-lazy-hiddensrc=data:svg-placeholderalt=환율 뉴스가 어려웠다면, 이것부터 읽어보세요w=1024 h=569
+        <div>.brxe-mgsdy9.brxe-block.dp-card-body.bricks-lazy-hidden
+          <p>.brxe-72lic7.brxe-text-basic.dp-card-cat
+            "Think"
+          <h2>.brxe-2bk6q0.brxe-heading.dp-card-title
+            "환율 뉴스가 어려웠다면, 이것부터 읽어보세요"
+          <p>.brxe-r8bloy.brxe-text-basic.dp-card-excerpt
+            "환율이 오르내릴 때 여행 경비와 수입 물가가 어떻게 달라지는지, 뉴스를 읽는 기본 순서에 따라 어려운 개념을 누구나 이해할 수 있게 차분하게 설명했습니다."
+          <div>.brxe-phwav0.brxe-block.dp-meta.bricks-lazy-hidden
+            <p>.brxe-evxwke.brxe-text-basic.dp-meta-item
+              "2026-10-03"
+      <a>.brxe-69blb9.brxe-block.dp-card.bricks-lazy-hiddenhref=/saving-habits/
+        <img>.brxe-bdd67o.brxe-image.dp-cover.css-filter.size-large.bricks-lazy-hiddensrc=data:svg-placeholderalt=월급날마다 고민되는 저축, 어디서부터 시작할까?w=1024 h=569
+        <div>.brxe-mgsdy9.brxe-block.dp-card-body.bricks-lazy-hidden
+          <p>.brxe-72lic7.brxe-text-basic.dp-card-cat
+            "Think"
+          <h2>.brxe-2bk6q0.brxe-heading.dp-card-title
+            "월급날마다 고민되는 저축, 어디서부터 시작할까?"
+          <p>.brxe-r8bloy.brxe-text-basic.dp-card-excerpt
+            "월급날 저축을 미루지 않으려면 남은 돈이 아니라 순서를 바꿔야 한다는 점을 짚고, 작게 시작해 오래 유지할 수 있는 현실적인 실천 방법을 정리했습니다."
+          <div>.brxe-phwav0.brxe-block.dp-meta.bricks-lazy-hidden
+            <p>.brxe-evxwke.brxe-text-basic.dp-meta-item
+              "2026-10-01"
+      <a>.brxe-69blb9.brxe-block.dp-card.bricks-lazy-hiddenhref=/local-shops-city/
+        <img>.brxe-bdd67o.brxe-image.dp-cover.css-filter.size-large.bricks-lazy-hiddensrc=data:svg-placeholderalt=동네 가게가 바꾸는 도시의 풍경w=1024 h=569
+        <div>.brxe-mgsdy9.brxe-block.dp-card-body.bricks-lazy-hidden
+          <p>.brxe-72lic7.brxe-text-basic.dp-card-cat
+            "Think"
+          <h2>.brxe-2bk6q0.brxe-heading.dp-card-title
+            "동네 가게가 바꾸는 도시의 풍경"
+          <p>.brxe-r8bloy.brxe-text-basic.dp-card-excerpt
+            "골목의 작은 가게가 빈 점포를 채우고 사람과 사람을 연결하며 도시의 풍경을 어떻게 바꾸는지, 그 느리지만 오래가는 변화의 힘을 차분하게 살펴봤습니다."
+          <div>.brxe-phwav0.brxe-block.dp-meta.bricks-lazy-hidden
+            <p>.brxe-evxwke.brxe-text-basic.dp-meta-item
+              "2026-09-30"
+      <a>.brxe-69blb9.brxe-block.dp-card.bricks-lazy-hiddenhref=/price-tags-economy/
+        <img>.brxe-bdd67o.brxe-image.dp-cover.css-filter.size-large.bricks-lazy-hiddensrc=data:svg-placeholderalt=가격표 속에 숨어 있는 경제 이야기w=1024 h=569
+        <div>.brxe-mgsdy9.brxe-block.dp-card-body.bricks-lazy-hidden
+          <p>.brxe-72lic7.brxe-text-basic.dp-card-cat
+            "Think"
+          <h2>.brxe-2bk6q0.brxe-heading.dp-card-title
+            "가격표 속에 숨어 있는 경제 이야기"
+          <p>.brxe-r8bloy.brxe-text-basic.dp-card-excerpt
+            "가격표 한 장에 원가와 인건비, 임대료와 세금이 어떻게 담기는지 숫자 뒤에 숨은 경제 원리를 차근차근 풀어내고 소비의 기준을 세우는 방법을 함께 담았습니다."
+          <div>.brxe-phwav0.brxe-block.dp-meta.bricks-lazy-hidden
+            <p>.brxe-evxwke.brxe-text-basic.dp-meta-item
+              "2026-09-29"
+      <a>.brx-query-trailhref=#role=presentation
+    <div>#brxe-ir3ezd.brxe-pagination.dp-pagination
+      <div>.bricks-paginationaria-label=페이지네이션role=navigation
+        <ul>.page-numbers
+          <li>
+            <span>.page-numbers.currentaria-current=page
+              "1"
+          <li>
+            <a>.page-numbershref=/category/think/page/2/
+              "2"
+          <li>
+            <a>.next.page-numbershref=/category/think/page/2/aria-label=다음 페이지
+              "→"

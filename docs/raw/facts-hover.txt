@@ -1,0 +1,28 @@
+###### home
+  .dp-card.brxe-block:hover .dp-card-title
+      text-decoration: underline
+  .dp-card:hover .dp-card-title
+      text-underline-offset: 4px
+  .dp-card:focus-visible
+      outline: 3px solid var(--dp-accent)
+      outline-offset: 5px
+  .dp-feature-main.brxe-block:hover .dp-feature-title
+      text-decoration: underline
+  .dp-feature-main:hover .dp-feature-title
+      text-underline-offset: 4px
+  .dp-compact-card.brxe-block:hover .dp-card-title
+      text-decoration: underline
+  .dp-compact-card:hover .dp-card-title
+      text-underline-offset: 4px
+  .dp-compact-card:focus-visible
+      outline: 3px solid var(--dp-accent)
+      outline-offset: 5px
+
+###### post
+  .dp-card.brxe-block:hover .dp-card-title
+      text-decoration: underline
+  .dp-card:hover .dp-card-title
+      text-underline-offset: 4px
+  .dp-card:focus-visible
+      outline: 3px solid var(--dp-accent)
+      outline-offset: 5px

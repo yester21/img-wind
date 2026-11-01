@@ -1,0 +1,58 @@
+/*
+ Theme Name:   Bricks Child Theme
+ Theme URI:    https://bricksbuilder.io/
+ Description:  Use this child theme to extend Bricks.
+ Author:       Bricks
+ Author URI:   https://bricksbuilder.io/
+ Template:     bricks
+ Version:      1.1
+ Text Domain:  bricks
+*/
+
+/* # BEGIN hermes-aa-contrast */
+/* WCAG AA 텍스트 색상 보정 — 브랜드 컬러를 딥 그린으로 교체하며 재산정
+   실제 배경 기준으로 계산 (#ffffff 및 푸터 #fafafa 모두 4.5:1 이상)
+
+   #999999 → #737373   2.73:1 → 4.53:1  (푸터 #fafafa 배경 기준)
+   #939393 → #6e6e6e   3.07:1 → 5.07:1  날짜·메타·캡션
+   #888888 → #666666   3.54:1 → 5.74:1  푸터 설명문
+   #777777 → #595959   4.48:1 → 6.97:1  태그라인·헤더날짜·섹션부제 등
+
+   브랜드 컬러(딥 그린)는 그 자체로 WCAG AA를 충족하므로 별도 보정이 필요 없습니다.
+     --dp-accent #1B4332   대비 11.08:1  카테고리 라벨·내비 링크
+     --dp-link   #2D6A4F   대비  6.39:1  본문 링크
+
+   border 색상은 변경하지 않음. color 속성만 지정.
+   선택자 명시도는 body 접두 + 클래스 반복으로 원본 규칙을 확실히 덮어씁니다. */
+
+/* 푸터 (배경 #fafafa) */
+body .dp-footer-copy.dp-footer-copy.brxe-text-basic { color: #737373; }
+body .dp-footer-notice.dp-footer-notice.brxe-text-basic { color: #737373; }
+body .dp-footer-desc.dp-footer-desc.brxe-text-basic { color: #666666; }
+
+/* 날짜·메타·캡션 (#939393) */
+body .dp-meta-item.dp-meta-item { color: #6e6e6e; }
+body .dp-author-date.dp-author-date { color: #6e6e6e; }
+body .dp-article-caption.dp-article-caption { color: #6e6e6e; }
+body .dp-header-date.dp-header-date { color: #595959; }
+
+/* 브랜드 액센트 텍스트 (#1B4332) — 내비 링크는 상위 규칙 명시도가 높아 !important 필요 */
+body .dp-nav.dp-nav a { color: #1B4332 !important; }
+body .dp-card-cat.dp-card-cat { color: #1B4332; }
+body .dp-article-cat.dp-article-cat { color: #1B4332; }
+
+/* 보조 텍스트 (#777777) */
+body .dp-tagline.dp-tagline { color: #595959; }
+body .dp-section-head-sub.dp-section-head-sub { color: #595959; }
+body .dp-feature-excerpt.dp-feature-excerpt { color: #595959; }
+body .dp-archive-count.dp-archive-count { color: #595959; }
+body .dp-archive-intro.dp-archive-intro.brxe-text-basic { color: #595959; }
+body .dp-section-more.dp-section-more.brxe-text-link { color: #595959; }
+body .dp-thumb-fallback-text.dp-thumb-fallback-text.brxe-text-basic { color: #595959; }
+
+/* 링크·브레드크럼·기타 */
+body .dp-breadcrumb.dp-breadcrumb.brxe-block { color: #666666; }
+body .dp-post-content.dp-post-content.brxe-block a { color: #2D6A4F; }
+body #brxe-lvlcal#brxe-lvlcal { color: #6e6e6e; }
+body #brxe-drxmb9#brxe-drxmb9 { color: #666666; }
+/* # END hermes-aa-contrast */

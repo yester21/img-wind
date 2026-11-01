@@ -1,0 +1,236 @@
+[178] .dp-single
+    padding: 0
+[179] .dp-article.brxe-container
+    display: block
+    max-width: 720px
+    margin-right: auto
+    margin-left: auto
+    padding-top: 48px
+    padding-right: 24px
+    padding-bottom: 70px
+    padding-left: 24px
+[180] @@media (max-width: 640px) .dp-article.brxe-container
+    padding-top: 28px
+    padding-right: 20px
+    padding-bottom: 45px
+    padding-left: 20px
+[181] .dp-breadcrumb.brxe-block
+    font-size: 14px
+    color: #888888
+    margin-bottom: 28px
+[182] .dp-article-cat.brxe-text-basic
+    margin-top: 0
+    margin-right: 0
+    margin-bottom: 10px
+    margin-left: 0
+    font-size: 15px
+    font-weight: 800
+    color: var(--dp-accent)
+[183] .dp-article-title.brxe-heading
+    font-size: 38px
+    font-weight: 800
+    line-height: 1.4
+    letter-spacing: -0.05em
+    color: var(--dp-ink)
+[184] .dp-article-title
+    margin: 0
+    word-break: keep-all
+    overflow-wrap: anywhere
+[185] @@media (max-width: 640px) .dp-article-title.dp-article-title
+    font-size: 29px
+[186] .dp-author.brxe-block
+    display: flex
+    align-items: center
+    gap: 12px
+    margin-top: 26px
+    margin-bottom: 30px
+[187] .dp-author-info.brxe-block
+    display: flex
+    flex-direction: column
+    gap: 2px
+[188] .dp-author-name.brxe-text-basic
+    font-size: 14px
+    font-weight: 700
+    color: var(--dp-ink)
+[189] .dp-author-name
+    margin: 0
+[190] .dp-author-meta.brxe-block
+    display: flex
+    align-items: center
+    gap: 6px
+    font-size: 13px
+    color: var(--dp-meta)
+[191] .dp-author-date.brxe-text-basic
+    font-size: 13px
+    color: var(--dp-meta)
+[192] .dp-author-date
+    margin: 0
+[193] .dp-article-cover.brxe-image img
+    display: block
+    width: 100%
+    height: 100%
+[194] .dp-article-cover img
+    object-fit: cover
+[195] .dp-article-cover.brxe-image
+    display: block
+    width: 100%
+    border-radius: 8px
+    margin-top: 30px
+    margin-bottom: 8px
+[196] .dp-article-cover.brxe-image:not(.tag), .dp-article-cover.brxe-image img
+    aspect-ratio: 1.8
+[197] .dp-article-cover
+    object-fit: cover
+[198] .dp-article-caption.brxe-text-basic
+    font-size: 12px
+    text-align: right
+    color: var(--dp-meta)
+[199] .dp-article-caption
+    margin: 0
+[200] .dp-post-content.brxe-block p
+    margin-top: 25px
+    margin-bottom: 25px
+[201] .dp-post-content.brxe-block h2
+    margin-top: 42px
+    margin-bottom: 18px
+    font-size: 25px
+    line-height: 1.5
+    letter-spacing: -0.03em
+    font-weight: 800
+    color: var(--dp-ink)
+[202] @@media (max-width: 640px) .dp-post-content.brxe-block h2
+    font-size: 23px
+[203] .dp-post-content.brxe-block h3
+    margin-top: 32px
+    margin-bottom: 14px
+    font-size: 19px
+    line-height: 1.5
+    font-weight: 800
+    color: var(--dp-ink)
+[204] .dp-post-content.brxe-block ul
+    padding-left: 24px
+    margin-top: 25px
+    margin-bottom: 25px
+[205] .dp-post-content.brxe-block ol
+    padding-left: 24px
+    margin-top: 25px
+    margin-bottom: 25px
+[206] .dp-post-content.brxe-block li
+    margin-top: 12px
+    margin-bottom: 12px
+[207] .dp-post-content.brxe-block a
+    color: var(--dp-link)
+    text-decoration: underline
+[208] .dp-post-content.brxe-block img
+    max-width: 100%
+    height: auto
+[209] .dp-post-content .wp-block-table
+    overflow-x: auto
+[210] .dp-post-content.brxe-block .wp-block-embed__wrapper
+    max-width: 100%
+[211] .dp-post-content.brxe-block iframe
+    max-width: 100%
+[212] .dp-post-content.brxe-block .dp-summary
+    margin-top: 30px
+    margin-bottom: 30px
+    padding-top: 24px
+    padding-right: 24px
+    padding-bottom: 24px
+    padding-left: 24px
+    background-color: #f7f7f7
+    border-radius: 8px
+[213] @@media (max-width: 640px) .dp-post-content.brxe-block .dp-summary
+    padding-top: 20px
+    padding-right: 20px
+    padding-bottom: 20px
+    padding-left: 20px
+[214] .dp-post-content.brxe-block .dp-summary h3
+    margin-top: 0
+    font-size: 17px
+    font-weight: 700
+[215] .dp-post-content.brxe-block .dp-summary ul
+    font-size: 16px
+    margin-bottom: 0
+[216] .dp-post-content.brxe-block .dp-note
+    margin-top: 30px
+    margin-right: 0
+    margin-bottom: 30px
+    margin-left: 0
+    padding-top: 8px
+    padding-right: 20px
+    padding-bottom: 8px
+    padding-left: 20px
+    color: #555555
+[217] .dp-post-content .dp-note
+    border-left: 3px solid var(--dp-accent)
+[218] .dp-post-content.brxe-block
+    font-size: 18px
+    line-height: 1.9
+    color: var(--dp-ink)
+[219] .dp-post-content
+    overflow-wrap: anywhere
+    word-break: keep-all
+[220] @@media (max-width: 640px) .dp-post-content.dp-post-content
+    font-size: 17px
+    line-height: 1.85
+[221] .dp-tags.brxe-block a
+    display: inline-block
+    background-color: #f5f5f5
+    border-radius: 4px
+    padding-top: 8px
+    padding-right: 12px
+    padding-bottom: 8px
+    padding-left: 12px
+    font-size: 14px
+    line-height: 1
+    color: #555555
+    text-decoration: none
+[222] .dp-tags.brxe-block span
+    display: inline-block
+    background-color: #f5f5f5
+    border-radius: 4px
+    padding-top: 8px
+    padding-right: 12px
+    padding-bottom: 8px
+    padding-left: 12px
+    font-size: 14px
+    line-height: 1
+    color: #555555
+    text-decoration: none
+[223] .dp-tags.brxe-block
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    gap: 8px
+    margin-top: 36px
+[224] .dp-related-section.brxe-section
+    padding-top: 0
+    padding-bottom: 64px
+[225] .dp-related-slot.brxe-block
+    display: block
+[304] #brxe-drxmb9
+    gap: 8px
+    font-size: 14px
+    color: #888888
+[305] #brxe-lvlcal
+    font-size: 13px
+    color: #939393
+[306] #brxe-w33eg7
+    flex-direction: row
+    justify-content: flex-end
+[307] @@media (max-width: 767px) #brxe-w33eg7
+    justify-content: flex-start
+[308] #brxe-jqin18
+    flex-direction: row
+[309] @@media (max-width: 767px) #brxe-jqin18
+    justify-content: space-between
+[310] #brxe-t54vbl
+    gap: 8px
+[311] #brxe-azwxs8
+    align-items: flex-start
+[312] #brxe-0z2ch8
+    width: 100%
+[313] #brxe-nk4in3
+    align-items: flex-start
+[315] @@media (min-width: 641px) #brxe-k5i53a > .dp-card:nth-child(n + 4)
+    display: none
