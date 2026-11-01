@@ -2,12 +2,12 @@ import type { Dict } from "./ko";
 
 const ja: Dict = {
   meta: {
-    titleDefault: "Imgwind — 画像圧縮 · 形式変換 · サイズ変更",
+    titleDefault: "Usepic — 画像圧縮 · 形式変換 · サイズ変更",
     desc: "ブラウザ上で直接処理する画像圧縮・形式変換・サイズ変更。アップロード不要で安全、複数枚を一括処理。",
   },
   footer: {
     notice: "画像はブラウザ（お使いのPC）内でのみ処理され、サーバーには送信されません。",
-    tagline: "Imgwind — 無料オンライン画像ツール",
+    tagline: "Usepic — 無料オンライン画像ツール",
   },
   home: {
     hero1: "画像加工は、",

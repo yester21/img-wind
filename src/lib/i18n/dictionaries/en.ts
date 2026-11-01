@@ -2,12 +2,12 @@ import type { Dict } from "./ko";
 
 const en: Dict = {
   meta: {
-    titleDefault: "Imgwind — Compress, Convert & Resize Images",
+    titleDefault: "Usepic — Compress, Convert & Resize Images",
     desc: "Compress, convert and resize images right in your browser. No uploads, fully private, batch-process many files at once.",
   },
   footer: {
     notice: "Images are processed in your browser (on your computer) and never uploaded.",
-    tagline: "Imgwind — Free online image tools",
+    tagline: "Usepic — Free online image tools",
   },
   home: {
     hero1: "Image editing,",

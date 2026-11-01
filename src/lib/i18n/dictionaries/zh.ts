@@ -2,12 +2,12 @@ import type { Dict } from "./ko";
 
 const zh: Dict = {
   meta: {
-    titleDefault: "Imgwind — 图片压缩 · 格式转换 · 尺寸调整",
+    titleDefault: "Usepic — 图片压缩 · 格式转换 · 尺寸调整",
     desc: "在浏览器中直接完成图片压缩、格式转换与尺寸调整。文件无需上传，安全私密，支持批量处理。",
   },
   footer: {
     notice: "图片默认在浏览器（您的电脑）中处理，不会上传到服务器。",
-    tagline: "Imgwind — 免费在线图片工具",
+    tagline: "Usepic — 免费在线图片工具",
   },
   home: {
     hero1: "图片处理，",

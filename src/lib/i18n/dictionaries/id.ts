@@ -2,12 +2,12 @@ import type { Dict } from "./ko";
 
 const id: Dict = {
   meta: {
-    titleDefault: "Imgwind — Kompresi · Konversi · Ubah Ukuran Gambar",
+    titleDefault: "Usepic — Kompresi · Konversi · Ubah Ukuran Gambar",
     desc: "Kompres, konversi, dan ubah ukuran gambar langsung di browser. Tanpa unggah, aman, dan bisa memproses banyak file sekaligus.",
   },
   footer: {
     notice: "Gambar diproses di browser (komputer Anda) dan tidak dikirim ke server.",
-    tagline: "Imgwind — Alat gambar online gratis",
+    tagline: "Usepic — Alat gambar online gratis",
   },
   home: {
     hero1: "Pengolahan gambar,",

@@ -28,7 +28,7 @@ export async function generateMetadata({
     metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://imgtools.seos.kr"),
     title: {
       default: d.meta.titleDefault,
-      template: `%s | Imgwind`,
+      template: `%s | ${locale === "ko" ? "유스픽" : "Usepic"}`,
     },
     description: d.meta.desc,
     icons: {
@@ -76,9 +76,9 @@ export default async function LocaleLayout({
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
         <header className="sticky top-0 z-40 bg-fog/80 backdrop-blur-md border-b border-hairline/60 py-4">
           <div className="max-w-7xl mx-auto px-5 flex items-center gap-6">
-            <Link href={`/${l}`} className="shrink-0" aria-label="Imgwind">
+            <Link href={`/${l}`} className="shrink-0" aria-label={l === "ko" ? "유스픽" : "Usepic"}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={logoSrc} alt="Imgwind" className="h-7 sm:h-8 w-auto logo-light" />
+              <img src={logoSrc} alt={l === "ko" ? "유스픽" : "Usepic"} className="h-7 sm:h-8 w-auto logo-light" />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={l === "ko" ? "/brand/imgwind-logo-ko-white.svg" : "/brand/imgwind-logo-white.svg"}
@@ -130,10 +130,79 @@ export default async function LocaleLayout({
         <main className="flex-1 w-full max-w-4xl mx-auto px-5 py-10">{children}</main>
 
         <footer className="border-t border-hairline/60 mt-10">
-          <div className="max-w-4xl mx-auto px-5 py-8 text-[14px] text-muted leading-relaxed">
-            <p>{d.footer.notice}</p>
-            <p className="mt-1.5">{d.footer.tagline}</p>
-          </div>
+          {l === "ko" ? (
+            <div className="max-w-7xl mx-auto px-5 py-12">
+              <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+                <div className="max-w-xs">
+                  <Link href={`/${l}`} className="inline-flex items-center" aria-label="유스픽">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/brand/imgwind-logo-ko.svg" alt="유스픽" className="h-8 w-auto logo-light" />
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/brand/imgwind-logo-ko-white.svg" alt="" aria-hidden className="h-8 w-auto logo-dark" />
+                  </Link>
+                  <p className="mt-4 text-[14px] text-muted leading-relaxed">{d.footer.notice}</p>
+                  <p className="mt-1.5 text-[14px] text-muted">{d.footer.tagline}</p>
+                </div>
+                <div className="grid grid-cols-2 gap-x-12 gap-y-8 sm:grid-cols-3">
+                  <div>
+                    <p className="text-[14px] font-semibold text-ink">주요 도구</p>
+                    <ul className="mt-3 space-y-2">
+                      {MAIN.map((m) => (
+                        <li key={m.href}>
+                          <Link href={`/${l}${m.href}`} className="text-[14px] text-muted transition-colors hover:text-primary">
+                            {m.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="text-[14px] font-semibold text-ink">더 많은 도구</p>
+                    <ul className="mt-3 space-y-2">
+                      {MORE.slice(0, 4).map((m) => (
+                        <li key={m.href}>
+                          <Link href={`/${l}${m.href}`} className="text-[14px] text-muted transition-colors hover:text-primary">
+                            {m.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="text-[14px] font-semibold text-ink">서비스</p>
+                    <ul className="mt-3 space-y-2">
+                      <li>
+                        <a href={`/${l}/about`} className="text-[14px] text-muted transition-colors hover:text-primary">
+                          서비스 소개
+                        </a>
+                      </li>
+                      <li>
+                        <a href={`/${l}/blog/`} className="text-[14px] text-muted transition-colors hover:text-primary">
+                          블로그
+                        </a>
+                      </li>
+                      {MORE.slice(4).map((m) => (
+                        <li key={m.href}>
+                          <Link href={`/${l}${m.href}`} className="text-[14px] text-muted transition-colors hover:text-primary">
+                            {m.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-hairline/60 pt-6 text-[14px] text-muted">
+                <span>© 2026 유스픽(usepic). All rights reserved.</span>
+                <span>이미지는 브라우저에서만 처리되며 서버로 전송되지 않습니다.</span>
+              </div>
+            </div>
+          ) : (
+            <div className="max-w-4xl mx-auto px-5 py-8 text-[14px] text-muted leading-relaxed">
+              <p>{d.footer.notice}</p>
+              <p className="mt-1.5">{d.footer.tagline}</p>
+            </div>
+          )}
         </footer>
       </body>
     </html>
