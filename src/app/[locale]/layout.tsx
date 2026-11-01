@@ -159,7 +159,7 @@ export default async function LocaleLayout({
                   <div>
                     <p className="text-[14px] font-semibold text-ink">더 많은 도구</p>
                     <ul className="mt-3 space-y-2">
-                      {MORE.slice(0, 4).map((m) => (
+                      {MORE.map((m) => (
                         <li key={m.href}>
                           <Link href={`/${l}${m.href}`} className="text-[14px] text-muted transition-colors hover:text-primary">
                             {m.label}
@@ -181,13 +181,6 @@ export default async function LocaleLayout({
                           블로그
                         </a>
                       </li>
-                      {MORE.slice(4).map((m) => (
-                        <li key={m.href}>
-                          <Link href={`/${l}${m.href}`} className="text-[14px] text-muted transition-colors hover:text-primary">
-                            {m.label}
-                          </Link>
-                        </li>
-                      ))}
                     </ul>
                   </div>
                 </div>
