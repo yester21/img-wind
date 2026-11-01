@@ -17,7 +17,7 @@ export const localeNames: Record<Locale, string> = {
   ja: "日本語",
   zh: "简体中文",
   "zh-TW": "繁體中文",
-  id: "Bahasa Indonesia",
+  id: "인도네시아",
   th: "ไทย",
   ru: "Русский",
 };

@@ -1,0 +1,3 @@
+blog: blog wp-theme-bricks wp-child-theme-bricks-child brx-body bricks-is-frontend wp-embed-responsive
+post: wp-singular post-template-default single single-post postid-23 single-format-standard wp-theme-bricks wp-child-theme-bricks-child brx-body bricks-is-frontend wp-embed-responsive
+category: archive category category-think category-3 wp-theme-bricks wp-child-theme-bricks-child brx-body bricks-is-frontend wp-embed-responsive

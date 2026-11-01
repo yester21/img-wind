@@ -1,0 +1,180 @@
+###### home
+  elem=? cls=brx-query-trail
+  {
+    "postType": [
+      "post"
+    ],
+    "posts_per_page": 1,
+    "orderby": "date",
+    "order": "DESC",
+    "ignore_sticky_posts": true,
+    "offset": "0",
+    "post_status": "publish",
+    "paged": 1
+  }
+  elem=? cls=brx-query-trail
+  {
+    "postType": [
+      "post"
+    ],
+    "posts_per_page": 3,
+    "orderby": "date",
+    "order": "DESC",
+    "offset": "1",
+    "ignore_sticky_posts": true,
+    "post_status": "publish",
+    "paged": 1
+  }
+  elem=? cls=brx-query-trail
+  {
+    "postType": [
+      "post"
+    ],
+    "posts_per_page": 6,
+    "orderby": "date",
+    "order": "DESC",
+    "offset": "0",
+    "ignore_sticky_posts": true,
+    "post_status": "publish",
+    "paged": 1
+  }
+  elem=? cls=brx-query-trail
+  {
+    "postType": [
+      "post"
+    ],
+    "posts_per_page": 4,
+    "orderby": {
+      "date": "DESC"
+    },
+    "ignore_sticky_posts": true,
+    "tax_query": [
+      {
+        "taxonomy": "category",
+        "field": "slug",
+        "terms": "think",
+        "operator": "IN"
+      }
+    ],
+    "post_status": "publish",
+    "paged": 1
+  }
+  elem=? cls=brx-query-trail
+  {
+    "postType": [
+      "post"
+    ],
+    "posts_per_page": 4,
+    "orderby": {
+      "date": "DESC"
+    },
+    "ignore_sticky_posts": true,
+    "tax_query": [
+      {
+        "taxonomy": "category",
+        "field": "slug",
+        "terms": "write",
+        "operator": "IN"
+      }
+    ],
+    "post_status": "publish",
+    "paged": 1
+  }
+  elem=? cls=brx-query-trail
+  {
+    "postType": [
+      "post"
+    ],
+    "posts_per_page": 4,
+    "orderby": {
+      "date": "DESC"
+    },
+    "ignore_sticky_posts": true,
+    "tax_query": [
+      {
+        "taxonomy": "category",
+        "field": "slug",
+        "terms": "learn",
+        "operator": "IN"
+      }
+    ],
+    "post_status": "publish",
+    "paged": 1
+  }
+  elem=? cls=brx-query-trail
+  {
+    "postType": [
+      "post"
+    ],
+    "posts_per_page": 4,
+    "orderby": {
+      "date": "DESC"
+    },
+    "ignore_sticky_posts": true,
+    "tax_query": [
+      {
+        "taxonomy": "category",
+        "field": "slug",
+        "terms": "ai",
+        "operator": "IN"
+      }
+    ],
+    "post_status": "publish",
+    "paged": 1
+  }
+
+###### blog
+  elem=? cls=brx-query-trail
+  {
+    "page": "",
+    "pagename": "blog",
+    "postType": [
+      "post"
+    ],
+    "posts_per_page": 6,
+    "orderby": "date",
+    "order": "DESC",
+    "is_archive_main_query": true,
+    "post_status": "publish",
+    "paged": 1
+  }
+
+###### post
+  elem=? cls=brx-query-trail
+  {
+    "postType": [
+      "post"
+    ],
+    "posts_per_page": 4,
+    "orderby": "date",
+    "order": "DESC",
+    "ignore_sticky_posts": true,
+    "post_status": "publish",
+    "paged": 1,
+    "post__not_in": [
+      23
+    ],
+    "tax_query": [
+      {
+        "taxonomy": "category",
+        "field": "name",
+        "terms": "Think",
+        "operator": "IN"
+      }
+    ]
+  }
+
+###### category
+  elem=? cls=brx-query-trail
+  {
+    "category_name": "think",
+    "postType": [
+      "post"
+    ],
+    "posts_per_page": 6,
+    "orderby": "date",
+    "order": "DESC",
+    "is_archive_main_query": true,
+    "post_status": "publish",
+    "paged": 1
+  }
