@@ -20,7 +20,7 @@ export default function ResultBar({
   return (
     <section className="card mt-6 px-5 py-4 flex flex-wrap items-center gap-x-6 gap-y-3">
       <div className="flex-1 min-w-[200px]">
-        <p className="text-[19px] font-medium text-ink">
+        <p className="text-[20px] font-medium text-ink">
           {fmt(c.doneOf, { done: summary.doneCount, total: summary.total })}
           {summary.errorCount > 0 && (
             <span className="ml-2 text-[16px] text-negative">

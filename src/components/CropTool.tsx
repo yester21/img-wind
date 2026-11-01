@@ -107,7 +107,7 @@ export default function CropTool({ d }: { d: Dict }) {
             </div>
           </div>
 
-          <p className="text-[15px] text-muted">{t.applyAll}</p>
+          <p className="text-[14px] text-muted">{t.applyAll}</p>
         </section>
       </ToolShell>
     </>

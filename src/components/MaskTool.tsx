@@ -45,7 +45,7 @@ export default function MaskTool({ d }: { d: Dict }) {
                 multi
                 onChange={(rs) => patch({ regions: rs })}
               />
-              <p className="mt-2 text-[15px] text-muted">{t.hint}</p>
+              <p className="mt-2 text-[14px] text-muted">{t.hint}</p>
             </div>
           )}
 

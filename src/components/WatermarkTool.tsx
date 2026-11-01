@@ -166,7 +166,7 @@ export default function WatermarkTool({ d }: { d: Dict }) {
                   className="field w-full py-2.5"
                 />
                 {wm.image && (
-                  <p className="mt-1 text-[15px] text-muted">{(wm.image as File).name ?? "logo"}</p>
+                  <p className="mt-1 text-[14px] text-muted">{(wm.image as File).name ?? "logo"}</p>
                 )}
               </div>
               <div>

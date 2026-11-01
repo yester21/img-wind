@@ -95,7 +95,7 @@ export default function PdfToImageTool({ d }: { d: Dict }) {
           <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
           <path d="M14 2v6h6" />
         </svg>
-        <label className="mt-3 inline-block text-[19px] font-medium text-primary cursor-pointer hover:underline">
+        <label className="mt-3 inline-block text-[20px] font-medium text-primary cursor-pointer hover:underline">
           {file ? file.name : t.pick}
           <input
             type="file"
@@ -108,7 +108,7 @@ export default function PdfToImageTool({ d }: { d: Dict }) {
             }}
           />
         </label>
-        <p className="mt-1 text-[15px] text-muted">{t.hint}</p>
+        <p className="mt-1 text-[14px] text-muted">{t.hint}</p>
       </div>
 
       {file && (
@@ -159,7 +159,7 @@ export default function PdfToImageTool({ d }: { d: Dict }) {
             <div>
               <div className="flex items-baseline justify-between">
                 <span className="field-label">{d.common.quality}</span>
-                <span className="text-[19px] font-medium text-primary tabular-nums">{quality}%</span>
+                <span className="text-[20px] font-medium text-primary tabular-nums">{quality}%</span>
               </div>
               <input
                 type="range"

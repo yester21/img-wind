@@ -7,11 +7,11 @@ import type { ImageTool, QueueItem } from "@/lib/useImageTool";
 
 function StatusCell({ item, d }: { item: QueueItem; d: Dict }) {
   if (item.status === "queued") {
-    return <span className="text-[15px] text-muted">{d.common.queued}</span>;
+    return <span className="text-[14px] text-muted">{d.common.queued}</span>;
   }
   if (item.status === "processing") {
     return (
-      <span className="inline-flex items-center gap-1.5 text-[15px] text-primary">
+      <span className="inline-flex items-center gap-1.5 text-[14px] text-primary">
         <svg className="animate-spin" width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden>
           <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="3" opacity="0.25" />
           <path d="M21 12a9 9 0 0 0-9-9" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
@@ -24,7 +24,7 @@ function StatusCell({ item, d }: { item: QueueItem; d: Dict }) {
     const msg =
       (item.error && (d.common.errors as Record<string, string>)[item.error]) || item.error || "";
     return (
-      <span className="text-[15px] text-negative" title={msg}>
+      <span className="text-[14px] text-negative" title={msg}>
         {fmt(d.common.failed, { msg })}
       </span>
     );
@@ -71,7 +71,7 @@ export default function FileQueue({
               />
               <div className="flex-1 min-w-0">
                 <p className="text-[18px] font-medium text-ink truncate">{item.file.name}</p>
-                <p className="mt-0.5 text-[15px] text-muted truncate">
+                <p className="mt-0.5 text-[14px] text-muted truncate">
                   {formatBytes(item.file.size)}
                   {item.status === "done" && item.result && (
                     <>
@@ -88,7 +88,7 @@ export default function FileQueue({
                       )}
                       {" · "}
                       {item.result.width}×{item.result.height}
-                      <span className="ml-1.5 rounded-full bg-fog px-2 py-0.5 text-[15px] text-muted">
+                      <span className="ml-1.5 rounded-full bg-fog px-2 py-0.5 text-[14px] text-muted">
                         {item.result.via === "browser" ? c.viaBrowser : c.viaServer}
                       </span>
                     </>

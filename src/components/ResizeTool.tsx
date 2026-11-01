@@ -85,7 +85,7 @@ export default function ResizeTool({ d }: { d: Dict }) {
               })}
             </div>
             {resize.mode === "cover" && resize.width && resize.height && (
-              <p className="mt-2 text-[15px] text-muted">
+              <p className="mt-2 text-[14px] text-muted">
                 {fmt(d.resize.coverNote, { w: resize.width, h: resize.height })}
               </p>
             )}
@@ -148,7 +148,7 @@ export default function ResizeTool({ d }: { d: Dict }) {
                 />
                 {r.lock}
               </label>
-              <p className="text-[15px] text-muted">{r.lockHint}</p>
+              <p className="text-[14px] text-muted">{r.lockHint}</p>
             </div>
           )}
 
@@ -210,7 +210,7 @@ export default function ResizeTool({ d }: { d: Dict }) {
                 />
                 {r.noUpscale}
               </label>
-              <p className="text-[15px] text-muted">{r.fitHint}</p>
+              <p className="text-[14px] text-muted">{r.fitHint}</p>
             </div>
           )}
 
@@ -239,7 +239,7 @@ export default function ResizeTool({ d }: { d: Dict }) {
                   <label className="field-label" htmlFor="resize-quality">
                     {c.quality}
                   </label>
-                  <span className="text-[19px] font-medium text-primary tabular-nums">
+                  <span className="text-[20px] font-medium text-primary tabular-nums">
                     {options.quality}%
                   </span>
                 </div>

@@ -91,7 +91,7 @@ export default function BgRemoveTool({ d }: { d: Dict }) {
           <button type="button" className="btn-primary w-full" disabled={running} onClick={run}>
             {running ? d.common.running : t.run}
           </button>
-          <p className="text-[15px] text-muted">{t.note}</p>
+          <p className="text-[14px] text-muted">{t.note}</p>
         </section>
       )}
 
@@ -109,7 +109,7 @@ export default function BgRemoveTool({ d }: { d: Dict }) {
               />
               <div className="flex-1 min-w-0">
                 <p className="text-[18px] font-medium text-ink truncate">{it.file.name}</p>
-                <p className="mt-0.5 text-[15px] text-muted">
+                <p className="mt-0.5 text-[14px] text-muted">
                   {it.status === "queued" && d.common.queued}
                   {it.status === "running" && t.removing}
                   {it.status === "error" && (

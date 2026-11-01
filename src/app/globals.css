@@ -130,7 +130,7 @@ body {
   .btn-primary,
   .btn-secondary {
     @apply inline-flex items-center justify-center gap-2 rounded-full px-5 h-11
-      text-[15px] font-medium transition-colors
+      text-[14px] font-medium transition-colors
       disabled:opacity-40 disabled:cursor-not-allowed;
   }
   .btn-primary {
@@ -147,7 +147,7 @@ body {
 
   /* 입력 필드 */
   .field {
-    @apply h-11 rounded-xl border border-hairline bg-surface px-3.5 text-[15px]
+    @apply h-11 rounded-xl border border-hairline bg-surface px-3.5 text-[14px]
       text-ink outline-none focus:border-primary transition-colors;
   }
   .field-label {

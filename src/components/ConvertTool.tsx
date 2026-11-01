@@ -47,7 +47,7 @@ export default function ConvertTool({ d }: { d: Dict }) {
                   >
                     {c.formats[f]}
                   </span>
-                  <span className="block mt-0.5 text-[15px] text-muted">{d.convert.hints[f]}</span>
+                  <span className="block mt-0.5 text-[14px] text-muted">{d.convert.hints[f]}</span>
                 </button>
               ))}
             </div>
@@ -57,7 +57,7 @@ export default function ConvertTool({ d }: { d: Dict }) {
             <div>
               <div className="flex items-baseline justify-between">
                 <span className="field-label">{c.quality}</span>
-                <span className="text-[19px] font-medium text-primary tabular-nums">
+                <span className="text-[20px] font-medium text-primary tabular-nums">
                   {options.quality}%
                 </span>
               </div>
@@ -92,11 +92,11 @@ export default function ConvertTool({ d }: { d: Dict }) {
                   {options.background}
                 </span>
               </div>
-              <p className="mt-2 text-[15px] text-muted">{d.convert.bgHint}</p>
+              <p className="mt-2 text-[14px] text-muted">{d.convert.bgHint}</p>
             </div>
           )}
 
-          {options.format === "avif" && <p className="text-[15px] text-muted">{c.avifNote}</p>}
+          {options.format === "avif" && <p className="text-[14px] text-muted">{c.avifNote}</p>}
         </section>
       </ToolShell>
     </>

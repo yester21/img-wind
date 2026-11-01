@@ -123,7 +123,7 @@ export default async function LocaleLayout({
         <main className="flex-1 w-full max-w-4xl mx-auto px-5 py-10">{children}</main>
 
         <footer className="border-t border-hairline/60 mt-10">
-          <div className="max-w-4xl mx-auto px-5 py-8 text-[15px] text-muted leading-relaxed">
+          <div className="max-w-4xl mx-auto px-5 py-8 text-[14px] text-muted leading-relaxed">
             <p>{d.footer.notice}</p>
             <p className="mt-1.5">{d.footer.tagline}</p>
           </div>

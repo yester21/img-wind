@@ -159,7 +159,7 @@ export default function ToPdfTool({ d }: { d: Dict }) {
           <div>
             <div className="flex items-baseline justify-between">
               <span className="field-label">{t.quality}</span>
-              <span className="text-[19px] font-medium text-primary tabular-nums">{quality}%</span>
+              <span className="text-[20px] font-medium text-primary tabular-nums">{quality}%</span>
             </div>
             <input
               type="range"
@@ -172,7 +172,7 @@ export default function ToPdfTool({ d }: { d: Dict }) {
             />
           </div>
 
-          <p className="text-[15px] text-muted">{t.note}</p>
+          <p className="text-[14px] text-muted">{t.note}</p>
         </section>
       )}
 
@@ -212,7 +212,7 @@ export default function ToPdfTool({ d }: { d: Dict }) {
                   key={it.id}
                   className="flex items-center gap-4 px-5 py-3 border-b border-hairline/40 last:border-b-0"
                 >
-                  <span className="w-6 text-center text-[15px] text-muted tabular-nums shrink-0">
+                  <span className="w-6 text-center text-[14px] text-muted tabular-nums shrink-0">
                     {i + 1}
                   </span>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -225,7 +225,7 @@ export default function ToPdfTool({ d }: { d: Dict }) {
                   />
                   <div className="flex-1 min-w-0">
                     <p className="text-[18px] font-medium text-ink truncate">{it.file.name}</p>
-                    <p className="mt-0.5 text-[15px] text-muted">{formatBytes(it.file.size)}</p>
+                    <p className="mt-0.5 text-[14px] text-muted">{formatBytes(it.file.size)}</p>
                   </div>
                   <button
                     type="button"

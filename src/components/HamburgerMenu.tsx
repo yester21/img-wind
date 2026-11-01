@@ -151,7 +151,7 @@ export default function HamburgerMenu({
                       key={item.href}
                       href={item.href}
                       onClick={() => setOpen(false)}
-                      className={`flex items-center px-5 py-3 text-[15px] whitespace-nowrap transition-colors hover:bg-fog ${
+                      className={`flex items-center px-5 py-3 text-[14px] whitespace-nowrap transition-colors hover:bg-fog ${
                         itemActive ? "text-primary font-bold" : "text-ink"
                       }`}
                     >

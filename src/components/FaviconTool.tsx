@@ -101,7 +101,7 @@ export default function FaviconTool({ d }: { d: Dict }) {
             />
           )}
           <div className="flex-1 min-w-0 text-center sm:text-left">
-            <p className="text-[19px] font-medium text-ink truncate">{file.name}</p>
+            <p className="text-[20px] font-medium text-ink truncate">{file.name}</p>
             <button
               type="button"
               className="btn-ghost mt-2"
@@ -140,7 +140,7 @@ export default function FaviconTool({ d }: { d: Dict }) {
                 </button>
               ))}
             </div>
-            <p className="mt-2 text-[15px] text-muted">{t.note}</p>
+            <p className="mt-2 text-[14px] text-muted">{t.note}</p>
           </div>
 
           <button type="button" className="btn-primary w-full" disabled={running || sizes.length === 0} onClick={generate}>
@@ -160,7 +160,7 @@ export default function FaviconTool({ d }: { d: Dict }) {
                       style={{ width: Math.min(96, r.size) }}
                       className="rounded bg-fog border border-hairline checker"
                     />
-                    <span className="text-[15px] text-muted tabular-nums">{r.size}px</span>
+                    <span className="text-[14px] text-muted tabular-nums">{r.size}px</span>
                   </div>
                 ))}
               </div>

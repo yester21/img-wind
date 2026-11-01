@@ -71,7 +71,7 @@ export default function AllInOneTool({ d }: { d: Dict }) {
           <div>
             <div className="flex items-baseline justify-between">
               <span className="field-label mb-0">{a.formatStep}</span>
-              <span className="text-[15px] text-muted">{a.formatBase}</span>
+              <span className="text-[14px] text-muted">{a.formatBase}</span>
             </div>
             <div className="mt-2.5 grid grid-cols-2 sm:grid-cols-5 gap-2">
               {FORMAT_KEYS.map((f) => (
@@ -93,7 +93,7 @@ export default function AllInOneTool({ d }: { d: Dict }) {
                   >
                     {c.formats[f]}
                   </span>
-                  <span className="block mt-0.5 text-[15px] text-muted">{a.hints[f]}</span>
+                  <span className="block mt-0.5 text-[14px] text-muted">{a.hints[f]}</span>
                 </button>
               ))}
             </div>
@@ -121,7 +121,7 @@ export default function AllInOneTool({ d }: { d: Dict }) {
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div className="flex items-baseline gap-2">
                 <span className="field-label mb-0">{a.compressStep}</span>
-                <span className="text-[15px] text-muted">{a.compressBase}</span>
+                <span className="text-[14px] text-muted">{a.compressBase}</span>
               </div>
               <div className="inline-flex rounded-full bg-fog border border-hairline/60 p-1">
                 {(
@@ -148,7 +148,7 @@ export default function AllInOneTool({ d }: { d: Dict }) {
               <div className="mt-4">
                 <div className="flex items-baseline justify-between">
                   <span className="text-[16px] text-muted">{c.quality}</span>
-                  <span className="text-[19px] font-medium text-primary tabular-nums">
+                  <span className="text-[20px] font-medium text-primary tabular-nums">
                     {options.quality}%
                   </span>
                 </div>
@@ -188,7 +188,7 @@ export default function AllInOneTool({ d }: { d: Dict }) {
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div className="flex items-baseline gap-2">
                 <span className="field-label mb-0">{a.resizeStep}</span>
-                <span className="text-[15px] text-muted">{a.resizeBase}</span>
+                <span className="text-[14px] text-muted">{a.resizeBase}</span>
               </div>
               <div className="inline-flex rounded-full bg-fog border border-hairline/60 p-1">
                 {MODE_KEYS.map((m) => (
@@ -340,7 +340,7 @@ export default function AllInOneTool({ d }: { d: Dict }) {
           </div>
 
           {(options.format === "png" || options.format === "avif") && (
-            <p className="text-[15px] text-muted">
+            <p className="text-[14px] text-muted">
               {options.format === "png" ? c.pngNote : c.avifNote}
             </p>
           )}

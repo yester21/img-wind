@@ -78,7 +78,7 @@ export default function CompressTool({ d }: { d: Dict }) {
             <div>
               <div className="flex items-baseline justify-between">
                 <span className="field-label">{c.quality}</span>
-                <span className="text-[19px] font-medium text-primary tabular-nums">
+                <span className="text-[20px] font-medium text-primary tabular-nums">
                   {options.quality}%
                 </span>
               </div>
@@ -91,7 +91,7 @@ export default function CompressTool({ d }: { d: Dict }) {
                 className="w-full"
                 aria-label={c.quality}
               />
-              <p className="mt-2 text-[15px] text-muted">{c.qualityHint}</p>
+              <p className="mt-2 text-[14px] text-muted">{c.qualityHint}</p>
             </div>
           ) : (
             <div>
@@ -110,11 +110,11 @@ export default function CompressTool({ d }: { d: Dict }) {
                 />
                 <span className="text-[18px] text-muted">{c.targetUnit}</span>
               </div>
-              <p className="mt-2 text-[15px] text-muted">{c.targetHint}</p>
+              <p className="mt-2 text-[14px] text-muted">{c.targetHint}</p>
             </div>
           )}
 
-          {options.format === "png" && <p className="text-[15px] text-muted">{c.pngNote}</p>}
+          {options.format === "png" && <p className="text-[14px] text-muted">{c.pngNote}</p>}
         </section>
       </ToolShell>
     </>

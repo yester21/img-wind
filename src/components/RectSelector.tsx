@@ -105,7 +105,7 @@ export default function RectSelector({ src, rects, onChange, multi = false, aspe
           <button
             type="button"
             aria-label="remove"
-            className="absolute -top-2.5 -right-2.5 w-5 h-5 rounded-full bg-ink text-white text-[15px] leading-none flex items-center justify-center"
+            className="absolute -top-2.5 -right-2.5 w-5 h-5 rounded-full bg-ink text-white text-[14px] leading-none flex items-center justify-center"
             onPointerDown={(e) => {
               e.stopPropagation();
               onChange(rects.filter((_, j) => j !== i));

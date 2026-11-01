@@ -59,7 +59,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           {TOOL_ICONS[tool.href]}
         </svg>
       </span>
-      <h2 className="text-[21px] font-semibold text-ink">{tool.t.title}</h2>
+      <h2 className="text-[20px] font-semibold text-ink">{tool.t.title}</h2>
       <p className="mt-1.5 text-[16px] leading-relaxed text-muted flex-1">{tool.t.desc}</p>
       <span className="mt-4 text-[16px] font-medium text-primary inline-flex items-center gap-1">
         {d.home.start}
@@ -89,7 +89,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           <br />
           {d.home.hero2}
         </h1>
-        <p className="mt-4 text-[21px] text-muted max-w-md mx-auto leading-relaxed">
+        <p className="mt-4 text-[20px] text-muted max-w-md mx-auto leading-relaxed">
           {d.home.sub}
         </p>
       </section>

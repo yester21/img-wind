@@ -59,8 +59,8 @@ export default function Dropzone({ onFiles, disabled, d }: Props) {
         <path d="M12 16V4m0 0 4.5 4.5M12 4 7.5 8.5" />
         <path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3" />
       </svg>
-      <p className="mt-3 text-[19px] font-medium text-ink">{c.dropTitle}</p>
-      <p className="mt-1 text-[15px] text-muted">{c.dropHint}</p>
+      <p className="mt-3 text-[20px] font-medium text-ink">{c.dropTitle}</p>
+      <p className="mt-1 text-[14px] text-muted">{c.dropHint}</p>
       <input
         ref={inputRef}
         type="file"

@@ -134,7 +134,7 @@ export default function OcrTool({ d }: { d: Dict }) {
               </button>
             )}
           </div>
-          <p className="text-[15px] text-muted">{t.note}</p>
+          <p className="text-[14px] text-muted">{t.note}</p>
         </section>
       )}
 
@@ -152,7 +152,7 @@ export default function OcrTool({ d }: { d: Dict }) {
               />
               <div className="flex-1 min-w-0">
                 <p className="text-[18px] font-medium text-ink truncate">{it.file.name}</p>
-                <p className="mt-0.5 text-[15px] text-muted">
+                <p className="mt-0.5 text-[14px] text-muted">
                   {it.status === "queued" && d.common.queued}
                   {it.status === "running" && t.running}
                   {it.status === "error" && (
