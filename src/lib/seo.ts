@@ -4,8 +4,8 @@ import { langAlternates, type Locale } from "./i18n/config";
 const BASE = process.env.NEXT_PUBLIC_SITE_URL || "https://usepic.net";
 
 export const OG_IMAGE = {
-  ko: "/og/og-ko.png",
-  en: "/og/og-en.png",
+  ko: "/og/og-ko.png?v=20261102",
+  en: "/og/og-en.png?v=20261102",
 } as const;
 
 export function ogImageFor(locale: Locale): string {
