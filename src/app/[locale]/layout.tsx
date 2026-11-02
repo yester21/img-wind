@@ -180,6 +180,26 @@ export default async function LocaleLayout({
               </div>
               <div className="grid grid-cols-2 gap-x-12 gap-y-8 sm:grid-cols-3">
                 <div>
+                  <p className="text-[14px] font-semibold text-ink">{d.foot.about}</p>
+                  <ul className="mt-3 space-y-2">
+                    <li>
+                      <a href={`/${l}/about`} className="text-[14px] text-muted transition-colors hover:text-primary">
+                        {d.foot.aboutLink}
+                      </a>
+                    </li>
+                    <li>
+                      <a href={`/${l}/blog/`} className="text-[14px] text-primary transition-colors hover:text-primary">
+                        {d.foot.blog}
+                      </a>
+                    </li>
+                    <li>
+                      <a href={`/${l}/contact`} className="text-[14px] text-muted transition-colors hover:text-primary">
+                        {d.foot.contact}
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
                   <p className="text-[14px] font-semibold text-ink">{d.foot.tools}</p>
                   <ul className="mt-3 space-y-2">
                     {MAIN.map((m) => (
@@ -201,26 +221,6 @@ export default async function LocaleLayout({
                         </Link>
                       </li>
                     ))}
-                  </ul>
-                </div>
-                <div>
-                  <p className="text-[14px] font-semibold text-ink">{d.foot.about}</p>
-                  <ul className="mt-3 space-y-2">
-                    <li>
-                      <a href={`/${l}/about`} className="text-[14px] text-muted transition-colors hover:text-primary">
-                        {d.foot.aboutLink}
-                      </a>
-                    </li>
-                    <li>
-                      <a href={`/${l}/blog/`} className="text-[14px] text-primary transition-colors hover:text-primary">
-                        {d.foot.blog}
-                      </a>
-                    </li>
-                    <li>
-                      <a href={`/${l}/contact`} className="text-[14px] text-muted transition-colors hover:text-primary">
-                        {d.foot.contact}
-                      </a>
-                    </li>
                   </ul>
                 </div>
               </div>
