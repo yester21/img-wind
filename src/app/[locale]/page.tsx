@@ -101,12 +101,12 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   return (
     <div>
       <section className="text-center pt-6 pb-12">
-        <h1 className="text-[50px] leading-tight font-semibold tracking-tight text-ink">
+        <h1 className="text-[42px] sm:text-[50px] leading-tight font-semibold tracking-tight text-ink">
           {d.home.hero1}
           <br />
           {d.home.hero2}
         </h1>
-        <p className="mt-4 text-[20px] text-muted max-w-md mx-auto leading-relaxed">
+        <p className="mt-4 text-[20px] text-muted max-w-[468px] mx-auto leading-relaxed break-keep text-balance">
           {d.home.sub}
         </p>
       </section>
