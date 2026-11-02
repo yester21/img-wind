@@ -176,7 +176,6 @@ export default async function LocaleLayout({
                     className="h-8 w-auto logo-dark"
                   />
                 </Link>
-                <p className="mt-4 text-[14px] text-muted leading-relaxed">{d.footer.notice}</p>
                 <p className="mt-1.5 text-[14px] text-muted">{d.footer.tagline}</p>
               </div>
               <div className="grid grid-cols-2 gap-x-12 gap-y-8 sm:grid-cols-3">
