@@ -23,8 +23,8 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
     <div className="break-keep">
       <section className="pt-4 pb-10 text-center">
         <p className="text-[14px] font-medium text-primary">{t.kicker}</p>
-        <h1 className="mt-2 text-[40px] font-semibold tracking-tight text-ink">{t.title}</h1>
-        <p className="mt-3 text-[20px] leading-relaxed text-muted max-w-xl mx-auto">{t.sub}</p>
+        <h1 className="mt-2 text-[34px] sm:text-[40px] font-semibold tracking-tight text-ink">{t.title}</h1>
+        <p className="mt-3 text-[20px] leading-relaxed text-muted max-w-2xl mx-auto break-keep text-balance">{t.sub}</p>
       </section>
       <div className="mx-auto max-w-2xl">
         <ContactForm t={t} locale={l} />

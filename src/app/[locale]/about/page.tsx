@@ -91,12 +91,12 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
           </svg>
           {c.badge}
         </span>
-        <h1 className="mt-5 text-[40px] sm:text-[50px] leading-[1.1] font-semibold tracking-tight text-ink max-w-3xl mx-auto">
+        <h1 className="mt-5 text-[34px] sm:text-[50px] leading-[1.1] font-semibold tracking-tight text-ink max-w-3xl mx-auto">
           {c.h1a}
           <br />
           {c.h1b}
         </h1>
-        <p className="mt-5 text-[20px] leading-relaxed text-muted max-w-xl mx-auto">{c.sub}</p>
+        <p className="mt-5 text-[20px] leading-relaxed text-muted max-w-2xl mx-auto break-keep text-balance">{c.sub}</p>
         <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
           <Link href={`/${l}/all-in-one`} className="btn-primary h-12 px-7 text-[16px]">
             {c.cta1}
