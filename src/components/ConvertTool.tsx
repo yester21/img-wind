@@ -27,14 +27,14 @@ export default function ConvertTool({ d }: { d: Dict }) {
         <section className="card mt-6 p-6 space-y-5">
           <div>
             <span className="field-label">{d.convert.pick}</span>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5">
               {CONV_KEYS.map((f) => (
                 <button
                   key={f}
                   type="button"
                   disabled={disabled(f)}
                   onClick={() => update("format", f)}
-                  className={`rounded-[12px] border px-3 py-2.5 text-left transition-colors ${
+                  className={`rounded-[12px] border px-2.5 py-2.5 text-left transition-colors ${
                     options.format === f
                       ? "border-primary bg-primary/5"
                       : "border-hairline hover:border-muted"
@@ -47,7 +47,7 @@ export default function ConvertTool({ d }: { d: Dict }) {
                   >
                     {c.formats[f]}
                   </span>
-                  <span className="block mt-0.5 text-[14px] text-muted">{d.convert.hints[f]}</span>
+                  <span className="block mt-0.5 text-[12px] text-muted whitespace-nowrap tracking-[-0.02em]">{d.convert.hints[f]}</span>
                 </button>
               ))}
             </div>

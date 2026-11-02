@@ -155,7 +155,7 @@ export default async function LocaleLayout({
           </div>
         </header>
 
-        <main className="flex-1 w-full max-w-4xl mx-auto px-5 py-10">{children}</main>
+        <main className="flex-1 w-full max-w-[960px] mx-auto px-5 py-10">{children}</main>
 
         <footer className="border-t border-hairline/60 mt-10">
           <div className="max-w-7xl mx-auto px-5 py-12">

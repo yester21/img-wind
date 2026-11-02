@@ -73,14 +73,14 @@ export default function AllInOneTool({ d }: { d: Dict }) {
               <span className="field-label mb-0">{a.formatStep}</span>
               <span className="text-[14px] text-muted">{a.formatBase}</span>
             </div>
-            <div className="mt-2.5 grid grid-cols-2 sm:grid-cols-5 gap-2">
+            <div className="mt-2.5 grid grid-cols-2 sm:grid-cols-5 gap-1.5">
               {FORMAT_KEYS.map((f) => (
                 <button
                   key={f}
                   type="button"
                   disabled={disabled(f)}
                   onClick={() => update("format", f)}
-                  className={`rounded-[12px] border px-3 py-2.5 text-left transition-colors ${
+                  className={`rounded-[12px] border px-2.5 py-2.5 text-left transition-colors ${
                     options.format === f
                       ? "border-primary bg-primary/5"
                       : "border-hairline hover:border-muted"
@@ -93,7 +93,9 @@ export default function AllInOneTool({ d }: { d: Dict }) {
                   >
                     {c.formats[f]}
                   </span>
-                  <span className="block mt-0.5 text-[14px] text-muted">{a.hints[f]}</span>
+                  <span className="block mt-0.5 text-[12px] text-muted whitespace-nowrap tracking-[-0.02em]">
+                    {a.hints[f]}
+                  </span>
                 </button>
               ))}
             </div>
