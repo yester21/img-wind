@@ -32,6 +32,14 @@ export default function ContactForm({ t, locale }: { t: ContactText; locale: Loc
         body: JSON.stringify(payload),
       });
       if (!res.ok) throw new Error(t.defaultError);
+      const w = window as unknown as { dataLayer?: Array<Record<string, unknown>> };
+      w.dataLayer = w.dataLayer || [];
+      w.dataLayer.push({
+        event: "contact_submit",
+        form: "contact",
+        language: locale,
+        page_path: window.location.pathname,
+      });
       setStatus("sent");
       form.reset();
     } catch (err) {

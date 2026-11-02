@@ -126,6 +126,11 @@ export default async function LocaleLayout({
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];window.dataLayer.push({language:"${l}"});document.addEventListener("click",function(e){var t=e.target;var a=t&&t.closest?t.closest('a[download],a[href^="blob:"]'):null;if(!a)return;window.dataLayer.push({event:"file_download",file_name:a.getAttribute("download")||"file",page_path:location.pathname});},true);`,
+          }}
+        />
         <Script
           id="gtm-init"
           strategy="afterInteractive"
