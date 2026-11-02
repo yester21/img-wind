@@ -84,14 +84,14 @@ export default function HamburgerMenu({
         aria-expanded={open}
         aria-label={ariaLabel}
         onClick={() => setOpen((v) => !v)}
-        className="flex h-9 w-9 items-center justify-center rounded-full text-ink hover:bg-ink/10 transition-colors"
+        className="flex h-10 w-10 items-center justify-center rounded-full text-ink hover:bg-ink/10 transition-colors"
       >
         {open ? (
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden>
             <path d="M6 6l12 12M18 6 6 18" />
           </svg>
         ) : (
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden>
             <path d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         )}
@@ -122,14 +122,14 @@ export default function HamburgerMenu({
                 <span className="flex items-center">
                   <img
                     src={logoSrc}
-                    alt="Imgwind"
-                    className="h-7 sm:h-8 w-auto logo-light"
+                    alt="UsePic"
+                    className="h-6 sm:h-8 w-auto max-w-[112px] logo-light"
                   />
                   <img
                     src={logoSrcDark}
                     alt=""
                     aria-hidden
-                    className="h-7 sm:h-8 w-auto logo-dark"
+                    className="h-6 sm:h-8 w-auto max-w-[112px] logo-dark"
                   />
                 </span>
                 <button

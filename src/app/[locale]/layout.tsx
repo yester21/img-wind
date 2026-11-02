@@ -120,16 +120,16 @@ export default async function LocaleLayout({
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <header className="sticky top-0 z-40 bg-fog/80 backdrop-blur-md border-b border-hairline/60 py-4">
-          <div className="max-w-7xl mx-auto px-5 flex items-center gap-6">
-            <Link href={`/${l}`} className="shrink-0" aria-label={l === "ko" ? "유즈픽" : "Usepic"}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-5 flex items-center gap-4 sm:gap-6">
+            <Link href={`/${l}`} className="shrink-0 min-w-0" aria-label={l === "ko" ? "유즈픽" : "UsePic"}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={logoSrc} alt={l === "ko" ? "유즈픽" : "Usepic"} className="h-7 sm:h-8 w-auto logo-light" />
+              <img src={logoSrc} alt={l === "ko" ? "유즈픽" : "UsePic"} className="h-6 sm:h-8 w-auto max-w-[112px] logo-light" />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={l === "ko" ? "/brand/usepic-ko-white.svg" : "/brand/usepic-en-white.svg"}
                 alt=""
                 aria-hidden
-                className="h-7 sm:h-8 w-auto logo-dark"
+                className="h-6 sm:h-8 w-auto max-w-[112px] logo-dark"
               />
             </Link>
             <nav className="hidden lg:flex items-center gap-7 self-stretch whitespace-nowrap">
@@ -141,7 +141,7 @@ export default async function LocaleLayout({
                 label={d.navMore}
               />
             </nav>
-            <div className="ml-auto flex items-center gap-1.5 lg:gap-3">
+            <div className="ml-auto flex items-center gap-1.5 lg:gap-3 shrink-0">
               <LocaleSwitcher locale={l} />
               <ThemeToggle />
               <HamburgerMenu
