@@ -20,7 +20,7 @@ export default function LocaleSwitcher({ locale }: { locale: Locale }) {
           parts[1] = next;
           router.push(parts.join("/") || `/${next}`);
         }}
-        className="appearance-none h-7 rounded-full border border-hairline bg-surface pl-2.5 pr-6 text-[14px] text-ink cursor-pointer hover:border-muted transition-colors focus:border-primary outline-none"
+        className="appearance-none h-7 w-[146px] rounded-full border border-hairline bg-surface pl-2.5 pr-6 text-[14px] text-ink cursor-pointer hover:border-muted transition-colors focus:border-primary outline-none"
       >
         {locales.map((l) => (
           <option key={l} value={l}>
