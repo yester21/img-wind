@@ -13,6 +13,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "Googlebot-Image", allow: "/" },
     ],
     // 블로그(워드프레스, Worker 프록시)의 Yoast 사이트맵도 함께 알린다
-    sitemap: [`${BASE}/sitemap.xml`, `${BASE}/sitemap_index.xml`],
+    sitemap: [`${BASE}/sitemap.xml`, `${BASE}/wp-sitemap.xml`],
   };
 }
