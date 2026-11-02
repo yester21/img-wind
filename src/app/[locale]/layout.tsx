@@ -120,7 +120,7 @@ export default async function LocaleLayout({
       <body className="min-h-screen flex flex-col">
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-KT2RZLXF"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-NNL7XBXJ"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
@@ -141,7 +141,7 @@ export default async function LocaleLayout({
         />
         <Script
           id="gtm-script"
-          src="https://www.googletagmanager.com/gtm.js?id=GTM-KT2RZLXF"
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-NNL7XBXJ"
           strategy="afterInteractive"
         />
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
