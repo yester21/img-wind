@@ -212,7 +212,7 @@ export default async function LocaleLayout({
                       </a>
                     </li>
                     <li>
-                      <a href={`/${l}/blog/`} className="text-[14px] text-muted transition-colors hover:text-primary">
+                      <a href={`/${l}/blog/`} className="text-[14px] text-primary transition-colors hover:text-primary">
                         {d.foot.blog}
                       </a>
                     </li>
