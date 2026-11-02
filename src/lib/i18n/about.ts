@@ -77,7 +77,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
 
     h1b: "브라우저에서 끝내세요",
 
-    sub: "유스픽은 압축·변환·리사이즈부터 PDF·워터마크·배경 제거·OCR까지 12가지 이미지 도구를 제공합니다. 설치도, 회원가입도, 파일 업로드도 없습니다.",
+    sub: "유즈픽은 압축·변환·리사이즈부터 PDF·워터마크·배경 제거·OCR까지 12가지 이미지 도구를 제공합니다. 설치도, 회원가입도, 파일 업로드도 없습니다.",
 
     cta1: "무료로 시작하기",
 
@@ -109,7 +109,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
 
     note: "어느 단계에서도 서버를 거치지 않습니다",
 
-    featuresTitle: "유스픽이 다른 점",
+    featuresTitle: "유즈픽이 다른 점",
 
     featuresDesc: "업로드 없는 처리, 한곳에 모인 도구, 멈추지 않는 속도.",
 

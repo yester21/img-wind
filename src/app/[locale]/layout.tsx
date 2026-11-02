@@ -29,7 +29,7 @@ export async function generateMetadata({
     metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://imgtools.seos.kr"),
     title: {
       default: d.meta.titleDefault,
-      template: `%s | ${locale === "ko" ? "유스픽" : "Usepic"}`,
+      template: `%s | ${locale === "ko" ? "유즈픽" : "Usepic"}`,
     },
     description: d.meta.desc,
     icons: {
@@ -121,9 +121,9 @@ export default async function LocaleLayout({
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <header className="sticky top-0 z-40 bg-fog/80 backdrop-blur-md border-b border-hairline/60 py-4">
           <div className="max-w-7xl mx-auto px-5 flex items-center gap-6">
-            <Link href={`/${l}`} className="shrink-0" aria-label={l === "ko" ? "유스픽" : "Usepic"}>
+            <Link href={`/${l}`} className="shrink-0" aria-label={l === "ko" ? "유즈픽" : "Usepic"}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={logoSrc} alt={l === "ko" ? "유스픽" : "Usepic"} className="h-7 sm:h-8 w-auto logo-light" />
+              <img src={logoSrc} alt={l === "ko" ? "유즈픽" : "Usepic"} className="h-7 sm:h-8 w-auto logo-light" />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={l === "ko" ? "/brand/usepic-ko-white.svg" : "/brand/usepic-en-white.svg"}
@@ -161,11 +161,11 @@ export default async function LocaleLayout({
           <div className="max-w-7xl mx-auto px-5 py-12">
             <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
               <div className="max-w-xs">
-                <Link href={`/${l}`} className="inline-flex items-center" aria-label={l === "ko" ? "유스픽" : "Usepic"}>
+                <Link href={`/${l}`} className="inline-flex items-center" aria-label={l === "ko" ? "유즈픽" : "Usepic"}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={l === "ko" ? "/brand/usepic-ko.svg" : "/brand/usepic-en.svg"}
-                    alt={l === "ko" ? "유스픽" : "Usepic"}
+                    alt={l === "ko" ? "유즈픽" : "Usepic"}
                     className="h-8 w-auto logo-light"
                   />
                   {/* eslint-disable-next-line @next/next/no-img-element */}
