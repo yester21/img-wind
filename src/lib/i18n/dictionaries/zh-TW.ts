@@ -2,13 +2,13 @@ import type { Dict } from "./ko";
 
 const zhTW: Dict = {
   meta: {
-    titleDefault: "Usepic — 圖片壓縮 · 格式轉換 · 尺寸調整",
+    titleDefault: "Usepic - 圖片壓縮 · 格式轉換 · 尺寸調整",
     desc: "在瀏覽器中直接完成圖片壓縮、格式轉換與尺寸調整。檔案無需上傳，安全私密，支援批次處理。",
   },
   foot: {"tools":"主要工具","more":"更多工具","about":"關於","aboutLink":"服務介紹","blog":"部落格","contact":"聯絡我們","privacy":"隱私權政策","rights":"© 2026 Usepic. All rights reserved."},
   footer: {
     notice: "圖片預設在瀏覽器（您的電腦）中處理，不會上傳到伺服器。",
-    tagline: "Usepic — 免費線上圖片工具",
+    tagline: "Usepic - 免費線上圖片工具",
   },
   home: {
     hero1: "圖片處理，",
@@ -43,13 +43,13 @@ const zhTW: Dict = {
   },
   common: {
     dropTitle: "拖放圖片，或點擊選擇",
-    dropHint: "JPG · PNG · WebP · GIF · BMP · AVIF · HEIC — 一次最多 100 張，單張 50MB",
+    dropHint: "JPG · PNG · WebP · GIF · BMP · AVIF · HEIC - 一次最多 100 張，單張 50MB",
     dropAria: "選擇圖片檔案",
     files: "{n} 個檔案",
     clearAll: "全部清除",
     queued: "等待中",
     processing: "處理中…",
-    failed: "失敗 — {msg}",
+    failed: "失敗 - {msg}",
     save: "儲存",
     removeAria: "刪除 {name}",
     viaBrowser: "瀏覽器處理",
@@ -60,7 +60,7 @@ const zhTW: Dict = {
     deleteAll: "全部刪除",
     run: "處理 {n} 張",
     running: "處理中…",
-    dirty: "選項已變更 — 重新處理",
+    dirty: "選項已變更 - 重新處理",
     quality: "品質",
     qualityHint: "對大多數照片，70–85% 能兼顧體積與品質。",
     modeQuality: "品質模式",
@@ -83,7 +83,7 @@ const zhTW: Dict = {
       ERR_SERVER: "伺服器處理失敗",
       ERR_PDF: "無法讀取 PDF",
       ERR_OCR: "文字辨識失敗",
-      ERR_MODEL: "AI 模型載入失敗 — 請檢查網路後重試",
+      ERR_MODEL: "AI 模型載入失敗 - 請檢查網路後重試",
       ERR_CANVAS: "此瀏覽器不支援 Canvas",
       ERR_ENCODE: "圖片編碼失敗",
     },
@@ -159,7 +159,7 @@ const zhTW: Dict = {
   },
   topdf: {
     title: "圖片 → PDF",
-    desc: "將多張圖片依順序合併為一個 PDF — 證件、合約提交利器，全程在瀏覽器中完成，無需上傳。",
+    desc: "將多張圖片依順序合併為一個 PDF - 證件、合約提交利器，全程在瀏覽器中完成，無需上傳。",
     page: "頁面大小",
     a4: "符合 A4",
     imageSize: "依圖片尺寸",
@@ -173,9 +173,9 @@ const zhTW: Dict = {
   },
   pdfimg: {
     title: "PDF → 圖片",
-    desc: "將 PDF 每一頁轉換為 PNG/JPEG 圖片並打包 ZIP 下載 — 全程在瀏覽器中完成。",
+    desc: "將 PDF 每一頁轉換為 PNG/JPEG 圖片並打包 ZIP 下載 - 全程在瀏覽器中完成。",
     pick: "選擇 PDF 檔案",
-    hint: "僅支援 PDF — 所有頁面都會轉換為圖片",
+    hint: "僅支援 PDF - 所有頁面都會轉換為圖片",
     scale: "解析度倍數",
     format: "輸出格式",
     run: "開始轉換",
@@ -192,7 +192,7 @@ const zhTW: Dict = {
   crop: {
     title: "裁切與旋轉",
     desc: "裁切所需區域，並對多張圖片批次套用 90° 旋轉與翻轉。",
-    area: "裁切區域 — 在預覽圖上拖曳",
+    area: "裁切區域 - 在預覽圖上拖曳",
     ratio: "比例",
     free: "自由",
     rotate: "旋轉",
@@ -226,7 +226,7 @@ const zhTW: Dict = {
   maskT: {
     title: "模糊與馬賽克",
     desc: "對人臉、地址等隱私區域進行模糊或馬賽克處理，可指定多個區域。",
-    regions: "要遮住的區域 — 在預覽圖上拖曳",
+    regions: "要遮住的區域 - 在預覽圖上拖曳",
     hint: "拖曳新增區域，點擊 × 按鈕刪除。",
     effect: "效果",
     blur: "模糊",

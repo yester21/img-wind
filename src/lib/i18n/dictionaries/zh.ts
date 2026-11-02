@@ -2,13 +2,13 @@ import type { Dict } from "./ko";
 
 const zh: Dict = {
   meta: {
-    titleDefault: "Usepic — 图片压缩 · 格式转换 · 尺寸调整",
+    titleDefault: "Usepic - 图片压缩 · 格式转换 · 尺寸调整",
     desc: "在浏览器中直接完成图片压缩、格式转换与尺寸调整。文件无需上传，安全私密，支持批量处理。",
   },
   foot: {"tools":"主要工具","more":"更多工具","about":"关于","aboutLink":"服务介绍","blog":"博客","contact":"联系我们","privacy":"隐私政策","rights":"© 2026 Usepic. All rights reserved."},
   footer: {
     notice: "图片默认在浏览器（您的电脑）中处理，不会上传到服务器。",
-    tagline: "Usepic — 免费在线图片工具",
+    tagline: "Usepic - 免费在线图片工具",
   },
   home: {
     hero1: "图片处理，",
@@ -43,13 +43,13 @@ const zh: Dict = {
   },
   common: {
     dropTitle: "拖放图片，或点击选择",
-    dropHint: "JPG · PNG · WebP · GIF · BMP · AVIF · HEIC — 一次最多 100 张，单张 50MB",
+    dropHint: "JPG · PNG · WebP · GIF · BMP · AVIF · HEIC - 一次最多 100 张，单张 50MB",
     dropAria: "选择图片文件",
     files: "{n} 个文件",
     clearAll: "全部清除",
     queued: "等待中",
     processing: "处理中…",
-    failed: "失败 — {msg}",
+    failed: "失败 - {msg}",
     save: "保存",
     removeAria: "删除 {name}",
     viaBrowser: "浏览器处理",
@@ -60,7 +60,7 @@ const zh: Dict = {
     deleteAll: "全部删除",
     run: "处理 {n} 张",
     running: "处理中…",
-    dirty: "选项已更改 — 重新处理",
+    dirty: "选项已更改 - 重新处理",
     quality: "质量",
     qualityHint: "对大多数照片，70–85% 能兼顾体积与质量。",
     modeQuality: "质量模式",
@@ -83,7 +83,7 @@ const zh: Dict = {
       ERR_SERVER: "服务器处理失败",
       ERR_PDF: "无法读取 PDF",
       ERR_OCR: "文字识别失败",
-      ERR_MODEL: "AI 模型加载失败 — 请检查网络后重试",
+      ERR_MODEL: "AI 模型加载失败 - 请检查网络后重试",
       ERR_CANVAS: "此浏览器不支持 Canvas",
       ERR_ENCODE: "图片编码失败",
     },
@@ -159,7 +159,7 @@ const zh: Dict = {
   },
   topdf: {
     title: "图片 → PDF",
-    desc: "将多张图片按顺序合并为一个 PDF — 证件、合同提交利器，全程在浏览器中完成，无需上传。",
+    desc: "将多张图片按顺序合并为一个 PDF - 证件、合同提交利器，全程在浏览器中完成，无需上传。",
     page: "页面大小",
     a4: "适配 A4",
     imageSize: "按图片尺寸",
@@ -173,9 +173,9 @@ const zh: Dict = {
   },
   pdfimg: {
     title: "PDF → 图片",
-    desc: "将 PDF 每一页转换为 PNG/JPEG 图片并打包 ZIP 下载 — 全程在浏览器中完成。",
+    desc: "将 PDF 每一页转换为 PNG/JPEG 图片并打包 ZIP 下载 - 全程在浏览器中完成。",
     pick: "选择 PDF 文件",
-    hint: "仅支持 PDF — 所有页面都会转换为图片",
+    hint: "仅支持 PDF - 所有页面都会转换为图片",
     scale: "分辨率倍数",
     format: "输出格式",
     run: "开始转换",
@@ -192,7 +192,7 @@ const zh: Dict = {
   crop: {
     title: "裁剪与旋转",
     desc: "裁剪所需区域，并对多张图片批量应用 90° 旋转与翻转。",
-    area: "裁剪区域 — 在预览图上拖动",
+    area: "裁剪区域 - 在预览图上拖动",
     ratio: "比例",
     free: "自由",
     rotate: "旋转",
@@ -226,7 +226,7 @@ const zh: Dict = {
   maskT: {
     title: "模糊与马赛克",
     desc: "对人脸、地址等隐私区域进行模糊或马赛克处理，可指定多个区域。",
-    regions: "要遮挡的区域 — 在预览图上拖动",
+    regions: "要遮挡的区域 - 在预览图上拖动",
     hint: "拖动添加区域，点击 × 按钮删除。",
     effect: "效果",
     blur: "模糊",

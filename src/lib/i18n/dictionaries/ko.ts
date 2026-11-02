@@ -1,13 +1,13 @@
-/** 한국어 사전 — Dict 타입의 원본 구조. 다른 언어 사전은 이 구조를 따라야 한다. */
+/** 한국어 사전 - Dict 타입의 원본 구조. 다른 언어 사전은 이 구조를 따라야 한다. */
 const ko = {
   meta: {
-    titleDefault: "유스픽 — 이미지 압축 · 포맷 전환 · 사이즈 조정",
+    titleDefault: "유스픽 - 이미지 압축 · 포맷 전환 · 사이즈 조정",
     desc: "브라우저에서 바로 처리하는 이미지 압축, 포맷 전환, 사이즈 조정. 파일 업로드 없이 안전하게, 여러 장을 한 번에.",
   },
   foot: {"tools":"주요 도구","more":"더 많은 도구","about":"소개","aboutLink":"서비스 소개","blog":"블로그","contact":"문의하기","privacy":"개인정보처리방침","rights":"© 2026 유스픽(usepic). All rights reserved."},
   footer: {
     notice: "이미지는 브라우저(내 컴퓨터)에서만 처리되며 서버로 전송되지 않습니다.",
-    tagline: "유스픽 — 무료 온라인 이미지 도구",
+    tagline: "유스픽 - 무료 온라인 이미지 도구",
   },
   home: {
     hero1: "이미지 작업,",
@@ -42,13 +42,13 @@ const ko = {
   },
   common: {
     dropTitle: "이미지를 끌어다 놓거나 클릭해서 선택하세요",
-    dropHint: "JPG · PNG · WebP · GIF · BMP · AVIF · HEIC — 한 번에 최대 100장, 파일당 50MB",
+    dropHint: "JPG · PNG · WebP · GIF · BMP · AVIF · HEIC - 한 번에 최대 100장, 파일당 50MB",
     dropAria: "이미지 파일 선택",
     files: "파일 {n}개",
     clearAll: "모두 지우기",
     queued: "대기 중",
     processing: "처리 중…",
-    failed: "실패 — {msg}",
+    failed: "실패 - {msg}",
     save: "저장",
     removeAria: "{name} 제거",
     viaBrowser: "브라우저 처리",
@@ -59,7 +59,7 @@ const ko = {
     deleteAll: "전체 삭제",
     run: "{n}장 처리하기",
     running: "처리 중…",
-    dirty: "옵션 변경됨 — 다시 처리",
+    dirty: "옵션 변경됨 - 다시 처리",
     quality: "품질",
     qualityHint: "70~85%가 대부분의 사진에서 용량과 품질의 균형이 좋습니다.",
     modeQuality: "품질 조절",
@@ -84,7 +84,7 @@ const ko = {
       ERR_SERVER: "서버 처리에 실패했습니다",
       ERR_PDF: "PDF를 읽을 수 없습니다",
       ERR_OCR: "텍스트 인식에 실패했습니다",
-      ERR_MODEL: "AI 모델을 불러오지 못했습니다 — 네트워크를 확인하고 다시 시도하세요",
+      ERR_MODEL: "AI 모델을 불러오지 못했습니다 - 네트워크를 확인하고 다시 시도하세요",
       ERR_CANVAS: "이 브라우저에서 캔버스를 사용할 수 없습니다",
       ERR_ENCODE: "이미지 인코딩에 실패했습니다",
     },
@@ -177,7 +177,7 @@ const ko = {
     title: "PDF → 이미지",
     desc: "PDF의 각 페이지를 PNG·JPEG 이미지로 변환해 ZIP으로 내려받습니다. 브라우저에서 직접 변환돼요.",
     pick: "PDF 파일 선택",
-    hint: "PDF만 지원 — 페이지 전체가 이미지로 변환됩니다",
+    hint: "PDF만 지원 - 페이지 전체가 이미지로 변환됩니다",
     scale: "해상도 배율",
     format: "출력 포맷",
     run: "변환하기",
@@ -194,7 +194,7 @@ const ko = {
   crop: {
     title: "자르기·회전",
     desc: "원하는 영역을 잘라내고 90° 회전·뒤집기를 여러 장에 한 번에 적용합니다.",
-    area: "자를 영역 — 미리보기에서 드래그하세요",
+    area: "자를 영역 - 미리보기에서 드래그하세요",
     ratio: "비율",
     free: "자유",
     rotate: "회전",
@@ -229,7 +229,7 @@ const ko = {
   maskT: {
     title: "블러·픽셀화",
     desc: "얼굴·주소 등 개인정보 영역을 블러 또는 픽셀화로 가립니다. 여러 영역을 지정할 수 있어요.",
-    regions: "가릴 영역 — 미리보기에서 드래그하세요",
+    regions: "가릴 영역 - 미리보기에서 드래그하세요",
     hint: "드래그로 영역 추가, 영역의 × 버튼으로 삭제합니다.",
     effect: "효과",
     blur: "블러",

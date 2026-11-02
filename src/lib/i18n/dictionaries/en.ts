@@ -2,18 +2,18 @@ import type { Dict } from "./ko";
 
 const en: Dict = {
   meta: {
-    titleDefault: "Usepic — Compress, Convert & Resize Images",
+    titleDefault: "Usepic - Compress, Convert & Resize Images",
     desc: "Compress, convert and resize images right in your browser. No uploads, fully private, batch-process many files at once.",
   },
   foot: {"tools":"Main tools","more":"More tools","about":"About","aboutLink":"About Usepic","blog":"Blog","contact":"Contact","privacy":"Privacy policy","rights":"© 2026 Usepic. All rights reserved."},
   footer: {
     notice: "Images are processed in your browser (on your computer) and never uploaded.",
-    tagline: "Usepic — Free online image tools",
+    tagline: "Usepic - Free online image tools",
   },
   home: {
     hero1: "Image editing,",
     hero2: "done in your browser.",
-    sub: "Files never leave your computer — everything is processed locally. Batch-process many images at once, free and unlimited.",
+    sub: "Files never leave your computer - everything is processed locally. Batch-process many images at once, free and unlimited.",
     start: "Get started",
     basicTitle: "Essential tools",
     moreTitle: "More tools",
@@ -43,13 +43,13 @@ const en: Dict = {
   },
   common: {
     dropTitle: "Drag & drop images here, or click to choose",
-    dropHint: "JPG · PNG · WebP · GIF · BMP · AVIF · HEIC — up to 100 files at once, 50MB each",
+    dropHint: "JPG · PNG · WebP · GIF · BMP · AVIF · HEIC - up to 100 files at once, 50MB each",
     dropAria: "Choose image files",
     files: "{n} files",
     clearAll: "Clear all",
     queued: "Queued",
     processing: "Processing…",
-    failed: "Failed — {msg}",
+    failed: "Failed - {msg}",
     save: "Save",
     removeAria: "Remove {name}",
     viaBrowser: "processed in browser",
@@ -60,7 +60,7 @@ const en: Dict = {
     deleteAll: "Delete all",
     run: "Process {n} images",
     running: "Processing…",
-    dirty: "Options changed — process again",
+    dirty: "Options changed - process again",
     quality: "Quality",
     qualityHint: "70–85% gives the best size/quality balance for most photos.",
     modeQuality: "Quality",
@@ -72,7 +72,7 @@ const en: Dict = {
     outputFormat: "Output format",
     formats: { keep: "Keep original", jpeg: "JPEG", png: "PNG", webp: "WebP", avif: "AVIF" },
     pngNote:
-      "PNG is lossless — quality and target-size settings don't apply. Size may change only through re-encoding.",
+      "PNG is lossless - quality and target-size settings don't apply. Size may change only through re-encoding.",
     avifNote: "AVIF gives the smallest sizes in browsers that support it. It can't be selected in unsupported browsers.",
     errors: {
       ERR_TOO_LARGE: "File is too large (max 50MB per file)",
@@ -85,7 +85,7 @@ const en: Dict = {
       ERR_SERVER: "Server processing failed",
       ERR_PDF: "Could not read the PDF",
       ERR_OCR: "Text recognition failed",
-      ERR_MODEL: "Could not load the AI model — check your network and retry",
+      ERR_MODEL: "Could not load the AI model - check your network and retry",
       ERR_CANVAS: "Canvas is not available in this browser",
       ERR_ENCODE: "Image encoding failed",
     },
@@ -105,13 +105,13 @@ const en: Dict = {
       webp: "Smaller than JPEG, transparency",
       avif: "Smallest, modern browsers",
     },
-    pngNoQuality: "PNG is lossless — no quality control.",
+    pngNoQuality: "PNG is lossless - no quality control.",
     bgLabel: "Transparency background",
     bgHint: "JPEG has no transparency, so transparent areas are filled with this color.",
   },
   resize: {
     title: "Resize images",
-    desc: "Batch-resize many images by pixels, percentage or max size — always preserving the original aspect ratio.",
+    desc: "Batch-resize many images by pixels, percentage or max size - always preserving the original aspect ratio.",
     mode: "Resize mode",
     modes: { pixels: "Pixels", percent: "Percent", fit: "Max size" },
     width: "Width (px)",
@@ -162,7 +162,7 @@ const en: Dict = {
   },
   topdf: {
     title: "Image → PDF",
-    desc: "Combine multiple images into a single PDF in order — certificates, contracts and more. Built in your browser, no uploads.",
+    desc: "Combine multiple images into a single PDF in order - certificates, contracts and more. Built in your browser, no uploads.",
     page: "Page size",
     a4: "Fit to A4",
     imageSize: "Image size",
@@ -176,9 +176,9 @@ const en: Dict = {
   },
   pdfimg: {
     title: "PDF → Image",
-    desc: "Convert each PDF page to PNG or JPEG images and download them as a ZIP — right in your browser.",
+    desc: "Convert each PDF page to PNG or JPEG images and download them as a ZIP - right in your browser.",
     pick: "Choose a PDF file",
-    hint: "PDF only — every page is converted to an image",
+    hint: "PDF only - every page is converted to an image",
     scale: "Resolution scale",
     format: "Output format",
     run: "Convert",
@@ -195,7 +195,7 @@ const en: Dict = {
   crop: {
     title: "Crop & rotate",
     desc: "Crop an area and apply 90° rotation or flipping to many images at once.",
-    area: "Crop area — drag on the preview",
+    area: "Crop area - drag on the preview",
     ratio: "Ratio",
     free: "Free",
     rotate: "Rotate",
@@ -230,7 +230,7 @@ const en: Dict = {
   maskT: {
     title: "Blur & pixelate",
     desc: "Hide faces, addresses or any private area with blur or pixelation. Multiple regions supported.",
-    regions: "Areas to hide — drag on the preview",
+    regions: "Areas to hide - drag on the preview",
     hint: "Drag to add an area, click its × button to remove it.",
     effect: "Effect",
     blur: "Blur",
@@ -255,7 +255,7 @@ const en: Dict = {
   },
   bg: {
     title: "Background remover",
-    desc: "Remove image backgrounds automatically with AI — subjects become transparent PNGs.",
+    desc: "Remove image backgrounds automatically with AI - subjects become transparent PNGs.",
     run: "Remove background",
     removing: "Removing…",
     note: "The first run downloads an AI model (~5MB). Images stay in your browser.",

@@ -2,13 +2,13 @@ import type { Dict } from "./ko";
 
 const ja: Dict = {
   meta: {
-    titleDefault: "Usepic — 画像圧縮 · 形式変換 · サイズ変更",
+    titleDefault: "Usepic - 画像圧縮 · 形式変換 · サイズ変更",
     desc: "ブラウザ上で直接処理する画像圧縮・形式変換・サイズ変更。アップロード不要で安全、複数枚を一括処理。",
   },
   foot: {"tools":"主なツール","more":"その他のツール","about":"紹介","aboutLink":"サービス紹介","blog":"ブログ","contact":"お問い合わせ","privacy":"プライバシーポリシー","rights":"© 2026 Usepic. All rights reserved."},
   footer: {
     notice: "画像はブラウザ（お使いのPC）内でのみ処理され、サーバーには送信されません。",
-    tagline: "Usepic — 無料オンライン画像ツール",
+    tagline: "Usepic - 無料オンライン画像ツール",
   },
   home: {
     hero1: "画像加工は、",
@@ -43,13 +43,13 @@ const ja: Dict = {
   },
   common: {
     dropTitle: "画像をドラッグ＆ドロップ、またはクリックして選択",
-    dropHint: "JPG · PNG · WebP · GIF · BMP · AVIF · HEIC — 一度に最大100枚、1ファイル50MBまで",
+    dropHint: "JPG · PNG · WebP · GIF · BMP · AVIF · HEIC - 一度に最大100枚、1ファイル50MBまで",
     dropAria: "画像ファイルを選択",
     files: "{n}件のファイル",
     clearAll: "すべて消去",
     queued: "待機中",
     processing: "処理中…",
-    failed: "失敗 — {msg}",
+    failed: "失敗 - {msg}",
     save: "保存",
     removeAria: "{name} を削除",
     viaBrowser: "ブラウザ処理",
@@ -60,7 +60,7 @@ const ja: Dict = {
     deleteAll: "すべて削除",
     run: "{n}枚を処理",
     running: "処理中…",
-    dirty: "設定が変更されました — 再処理",
+    dirty: "設定が変更されました - 再処理",
     quality: "品質",
     qualityHint: "ほとんどの写真では 70〜85% がサイズと品質のバランスが最適です。",
     modeQuality: "品質指定",
@@ -85,7 +85,7 @@ const ja: Dict = {
       ERR_SERVER: "サーバー処理に失敗しました",
       ERR_PDF: "PDFを読み込めませんでした",
       ERR_OCR: "テキスト認識に失敗しました",
-      ERR_MODEL: "AIモデルを読み込めませんでした — ネットワークを確認して再試行してください",
+      ERR_MODEL: "AIモデルを読み込めませんでした - ネットワークを確認して再試行してください",
       ERR_CANVAS: "このブラウザではキャンバスを使用できません",
       ERR_ENCODE: "画像のエンコードに失敗しました",
     },
@@ -178,7 +178,7 @@ const ja: Dict = {
     title: "PDF → 画像",
     desc: "PDFの各ページをPNG・JPEG画像に変換してZIPでダウンロード。ブラウザ内で直接変換します。",
     pick: "PDFファイルを選択",
-    hint: "PDFのみ対応 — 全ページが画像に変換されます",
+    hint: "PDFのみ対応 - 全ページが画像に変換されます",
     scale: "解像度倍率",
     format: "出力フォーマット",
     run: "変換する",
@@ -195,7 +195,7 @@ const ja: Dict = {
   crop: {
     title: "切り抜き・回転",
     desc: "必要な範囲を切り抜き、90°回転・反転を複数枚に一括適用します。",
-    area: "切り抜き範囲 — プレビュー上でドラッグ",
+    area: "切り抜き範囲 - プレビュー上でドラッグ",
     ratio: "比率",
     free: "自由",
     rotate: "回転",
@@ -230,7 +230,7 @@ const ja: Dict = {
   maskT: {
     title: "ぼかし・モザイク",
     desc: "顔・住所などの個人情報をぼかしやモザイクで隠します。複数範囲を指定できます。",
-    regions: "隠す範囲 — プレビュー上でドラッグ",
+    regions: "隠す範囲 - プレビュー上でドラッグ",
     hint: "ドラッグで範囲を追加、×ボタンで削除します。",
     effect: "エフェクト",
     blur: "ぼかし",
