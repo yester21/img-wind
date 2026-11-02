@@ -2,13 +2,13 @@ import type { Dict } from "./ko";
 
 const en: Dict = {
   meta: {
-    titleDefault: "Usepic - Compress, Convert & Resize Images",
+    titleDefault: "UsePic - Compress, Convert & Resize Images",
     desc: "Compress, convert and resize images right in your browser. No uploads, fully private, batch-process many files at once.",
   },
-  foot: {"tools":"Main tools","more":"More tools","about":"About","aboutLink":"About Usepic","blog":"Blog","contact":"Contact","privacy":"Privacy policy","rights":"© 2026 Usepic. All rights reserved."},
+  foot: {"tools":"Main tools","more":"More tools","about":"About","aboutLink":"About UsePic","blog":"Blog","contact":"Contact","privacy":"Privacy policy","rights":"© 2026 UsePic. All rights reserved."},
   footer: {
     notice: "Images are processed in your browser (on your computer) and never uploaded.",
-    tagline: "Usepic - Free online image tools",
+    tagline: "UsePic - Free online image tools",
   },
   home: {
     hero1: "Image editing,",

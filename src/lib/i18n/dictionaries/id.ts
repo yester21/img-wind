@@ -2,13 +2,13 @@ import type { Dict } from "./ko";
 
 const id: Dict = {
   meta: {
-    titleDefault: "Usepic - Kompresi · Konversi · Ubah Ukuran Gambar",
+    titleDefault: "UsePic - Kompresi · Konversi · Ubah Ukuran Gambar",
     desc: "Kompres, konversi, dan ubah ukuran gambar langsung di browser. Tanpa unggah, aman, dan bisa memproses banyak file sekaligus.",
   },
-  foot: {"tools":"Alat utama","more":"Alat lainnya","about":"Tentang","aboutLink":"Tentang layanan","blog":"Blog","contact":"Hubungi kami","privacy":"Kebijakan privasi","rights":"© 2026 Usepic. All rights reserved."},
+  foot: {"tools":"Alat utama","more":"Alat lainnya","about":"Tentang","aboutLink":"Tentang layanan","blog":"Blog","contact":"Hubungi kami","privacy":"Kebijakan privasi","rights":"© 2026 UsePic. All rights reserved."},
   footer: {
     notice: "Gambar diproses di browser (komputer Anda) dan tidak dikirim ke server.",
-    tagline: "Usepic - Alat gambar online gratis",
+    tagline: "UsePic - Alat gambar online gratis",
   },
   home: {
     hero1: "Pengolahan gambar,",

@@ -13,7 +13,7 @@ export function ogImageFor(locale: Locale): string {
 }
 
 export function brandName(locale: Locale): string {
-  return locale === "ko" ? "유스픽" : "Usepic";
+  return locale === "ko" ? "유스픽" : "UsePic";
 }
 
 const OG_LOCALES: Partial<Record<Locale, string>> = {
