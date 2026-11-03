@@ -5,7 +5,7 @@ const ja: Dict = {
     titleDefault: "UsePic - 画像圧縮 · 形式変換 · サイズ変更",
     desc: "ブラウザ上で直接処理する画像圧縮・形式変換・サイズ変更。アップロード不要で安全、複数枚を一括処理。",
   },
-  foot: {"tools":"主なツール","more":"その他のツール","about":"紹介","aboutLink":"サービス紹介","blog":"ブログ","contact":"お問い合わせ","privacy":"プライバシーポリシー","rights":"© 2026 UsePic. All rights reserved."},
+  foot: {"tools":"主なツール","more":"その他のツール","about":"紹介","aboutLink":"サービス紹介","blog":"ブログ","contact":"お問い合わせ","privacy":"プライバシーポリシー","rights":"© 2026 UsePic. All rights reserved.","studio":"フォトスタジオ"},
   footer: {
     notice: "画像はブラウザ（お使いのPC）内でのみ処理され、サーバーには送信されません。",
     tagline: "UsePic - 無料オンライン画像ツール",

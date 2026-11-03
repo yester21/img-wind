@@ -5,7 +5,7 @@ const zh: Dict = {
     titleDefault: "UsePic - 图片压缩 · 格式转换 · 尺寸调整",
     desc: "在浏览器中直接完成图片压缩、格式转换与尺寸调整。文件无需上传，安全私密，支持批量处理。",
   },
-  foot: {"tools":"主要工具","more":"更多工具","about":"关于","aboutLink":"服务介绍","blog":"博客","contact":"联系我们","privacy":"隐私政策","rights":"© 2026 UsePic. All rights reserved."},
+  foot: {"tools":"主要工具","more":"更多工具","about":"关于","aboutLink":"服务介绍","blog":"博客","contact":"联系我们","privacy":"隐私政策","rights":"© 2026 UsePic. All rights reserved.","studio":"照片工作室"},
   footer: {
     notice: "图片默认在浏览器（您的电脑）中处理，不会上传到服务器。",
     tagline: "UsePic - 免费在线图片工具",

@@ -220,6 +220,16 @@ export default async function LocaleLayout({
                       </a>
                     </li>
                     <li>
+                      <a
+                        href="https://studio.usepic.net/"
+                        target="_blank"
+                        rel="noopener"
+                        className="text-[14px] text-primary transition-colors hover:underline"
+                      >
+                        {d.foot.studio}
+                      </a>
+                    </li>
+                    <li>
                       <a href={`/${l}/contact`} className="text-[14px] text-muted transition-colors hover:text-primary">
                         {d.foot.contact}
                       </a>

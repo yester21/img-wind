@@ -4,7 +4,7 @@ const ko = {
     titleDefault: "유즈픽 - 이미지 압축 · 포맷 전환 · 사이즈 조정",
     desc: "브라우저에서 바로 처리하는 이미지 압축, 포맷 전환, 사이즈 조정. 파일 업로드 없이 안전하게, 여러 장을 한 번에.",
   },
-  foot: {"tools":"주요 도구","more":"더 많은 도구","about":"소개","aboutLink":"서비스 소개","blog":"블로그","contact":"문의하기","privacy":"개인정보처리방침","rights":"© 2026 유즈픽(usepic). All rights reserved."},
+  foot: {"tools":"주요 도구","more":"더 많은 도구","about":"소개","aboutLink":"서비스 소개","blog":"블로그","contact":"문의하기","privacy":"개인정보처리방침","rights":"© 2026 유즈픽(usepic). All rights reserved.","studio":"포토 스튜디오"},
   footer: {
     notice: "이미지는 브라우저(내 컴퓨터)에서만 처리되며 서버로 전송되지 않습니다.",
     tagline: "유즈픽 - 무료 온라인 이미지 도구",
