@@ -48,6 +48,9 @@ export async function generateMetadata({
         "naver-site-verification": "e1bfcc1200cb692cf5a917e3bbeeebe623ee8634",
       },
     },
+    other: {
+      "google-adsense-account": "ca-pub-4487133080505128",
+    },
     openGraph: {
       type: "website",
       siteName: brandName(locale as Locale),
