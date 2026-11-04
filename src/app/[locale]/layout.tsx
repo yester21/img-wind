@@ -267,7 +267,7 @@ export default async function LocaleLayout({
             </div>
             <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-hairline/60 pt-6 text-[14px] text-muted">
               <span>{d.foot.rights}</span>
-              <a href={`/${l}/privacy`} className="text-[#0059b3] transition-colors hover:underline">
+              <a href={`/${l}/privacy`} className="text-muted transition-colors hover:text-primary">
                 {d.foot.privacy}
               </a>
             </div>
