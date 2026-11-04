@@ -205,6 +205,7 @@ const en: Dict = {
     flipV: "Vertical",
     applyAll:
       "The area drawn on the first image is stored as relative coordinates (0–100%) and applied to every file.",
+    grid: "Grid",
   },
   wm: {
     title: "Watermark",

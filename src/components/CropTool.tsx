@@ -22,6 +22,7 @@ export default function CropTool({ d }: { d: Dict }) {
   const tool = useImageTool("crop", { crop: null, rotation: 0, flip: "none" });
   const { options, update } = tool;
   const [aspect, setAspect] = useState<number | null>(null);
+  const [grid, setGrid] = useState(false);
   const t = d.crop;
 
   const previewUrl = tool.items[0]?.previewUrl;
@@ -36,11 +37,24 @@ export default function CropTool({ d }: { d: Dict }) {
         <section className="card mt-6 p-6 space-y-5">
           {previewUrl && (
             <div>
-              <span className="field-label">{t.area}</span>
+              <div className="flex items-center justify-between gap-3">
+                <span className="field-label">{t.area}</span>
+                <button
+                  type="button"
+                  aria-pressed={grid}
+                  onClick={() => setGrid((v) => !v)}
+                  className={`inline-flex items-center h-8 px-3.5 rounded-full border text-[14px] transition-colors ${
+                    grid ? "border-primary text-primary bg-primary/10" : "border-hairline text-muted"
+                  }`}
+                >
+                  {t.grid}
+                </button>
+              </div>
               <RectSelector
                 src={previewUrl}
                 rects={rects}
                 aspect={aspect}
+                grid={grid}
                 onChange={(rs) => update("crop", rs[0] ?? null)}
               />
             </div>

@@ -201,6 +201,7 @@ const zh: Dict = {
     flipH: "水平",
     flipV: "垂直",
     applyAll: "在第一张图片上绘制的区域按相对坐标（0–100%）记录，并应用到所有文件。",
+    grid: "网格",
   },
   wm: {
     title: "水印",

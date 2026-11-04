@@ -201,6 +201,7 @@ const zhTW: Dict = {
     flipH: "水平",
     flipV: "垂直",
     applyAll: "在第一張圖片上繪製的區域按相對座標（0–100%）記錄，並套用到所有檔案。",
+    grid: "網格",
   },
   wm: {
     title: "浮水印",

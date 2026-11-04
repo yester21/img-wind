@@ -201,6 +201,7 @@ const id: Dict = {
     flipH: "Horizontal",
     flipV: "Vertikal",
     applyAll: "Area yang digambar pada gambar pertama dicatat sebagai koordinat relatif (0–100%) dan diterapkan ke semua file.",
+    grid: "Kisi",
   },
   wm: {
     title: "Watermark",
