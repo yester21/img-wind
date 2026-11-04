@@ -218,7 +218,7 @@ export default async function LocaleLayout({
                       </a>
                     </li>
                     <li>
-                      <a href={`/${l}/blog/`} className="text-[14px] text-primary transition-colors hover:text-primary">
+                      <a href={`/${l}/blog/`} className="text-[14px] text-[#0059b3] transition-colors hover:underline">
                         {d.foot.blog}
                       </a>
                     </li>
@@ -227,7 +227,7 @@ export default async function LocaleLayout({
                         href="https://studio.usepic.net/"
                         target="_blank"
                         rel="noopener"
-                        className="text-[14px] text-primary transition-colors hover:underline"
+                        className="text-[14px] text-[#0059b3] transition-colors hover:underline"
                       >
                         {d.foot.studio}
                       </a>
@@ -267,7 +267,7 @@ export default async function LocaleLayout({
             </div>
             <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-hairline/60 pt-6 text-[14px] text-muted">
               <span>{d.foot.rights}</span>
-              <a href={`/${l}/privacy`} className="text-primary transition-colors hover:text-primary">
+              <a href={`/${l}/privacy`} className="text-[#0059b3] transition-colors hover:underline">
                 {d.foot.privacy}
               </a>
             </div>
