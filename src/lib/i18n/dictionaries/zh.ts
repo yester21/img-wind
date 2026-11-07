@@ -261,6 +261,13 @@ const zh: Dict = {
   navBlog: "博客",
   navMore: "全部工具",
   lang: { label: "语言" },
+  consent: {
+    title: "Cookie 与分析",
+    desc: "我们使用 Cookie 和分析工具来改进服务。拒绝后仍可使用全部功能。",
+    accept: "同意",
+    reject: "拒绝",
+    settings: "Cookie 设置",
+  },
 };
 
 export default zh;

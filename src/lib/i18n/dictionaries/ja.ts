@@ -265,6 +265,13 @@ const ja: Dict = {
   navBlog: "ブログ",
   navMore: "すべてのツール",
   lang: { label: "言語" },
+  consent: {
+    title: "Cookie と分析",
+    desc: "サービス改善のため Cookie と分析ツールを使用します。拒否してもすべての機能を利用できます。",
+    accept: "同意する",
+    reject: "拒否する",
+    settings: "Cookie 設定",
+  },
 };
 
 export default ja;

@@ -265,6 +265,13 @@ const en: Dict = {
   navBlog: "Blog",
   navMore: "All tools",
   lang: { label: "Language" },
+  consent: {
+    title: "Cookies and analytics",
+    desc: "We use cookies and analytics to improve the service. You can still use every feature if you decline.",
+    accept: "Accept",
+    reject: "Reject",
+    settings: "Cookie settings",
+  },
 };
 
 export default en;

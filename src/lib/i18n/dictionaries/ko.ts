@@ -264,6 +264,13 @@ const ko = {
   navBlog: "블로그",
   navMore: "모든 도구",
   lang: { label: "언어" },
+  consent: {
+    title: "쿠키 및 분석 도구",
+    desc: "서비스 개선을 위해 쿠키와 분석 도구를 사용합니다. 거부해도 모든 기능을 그대로 사용할 수 있습니다.",
+    accept: "동의",
+    reject: "거부",
+    settings: "쿠키 설정",
+  },
 };
 
 export type Dict = typeof ko;

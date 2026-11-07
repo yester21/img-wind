@@ -158,7 +158,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
           <h2 className="text-[25px] font-semibold tracking-tight text-ink">{c.featuresTitle}</h2>
           <p className="mt-2 text-[16px] text-muted">{c.featuresDesc}</p>
         </div>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {c.features.map((f, i) => (
             <div key={f.t} className="card border border-hairline/60 p-6">
               <span
@@ -190,7 +190,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             </svg>
           </Link>
         </div>
-        <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-6 grid w-full grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {TOOL_HREFS.map((href) => (
             <Link
               key={href}

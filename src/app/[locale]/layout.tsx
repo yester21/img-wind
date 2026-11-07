@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Script from "next/script";
 import { notFound } from "next/navigation";
 import { langAlternates, isLocale, locales, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n";
@@ -10,6 +9,8 @@ import SiteNav from "@/components/SiteNav";
 import ToolsMenu from "@/components/ToolsMenu";
 import HamburgerMenu from "@/components/HamburgerMenu";
 import ThemeToggle from "@/components/ThemeToggle";
+import CookieConsent from "@/components/CookieConsent";
+import CookieSettingsButton from "@/components/CookieSettingsButton";
 import "../globals.css";
 
 /** 다크모드 초기화 — 페인트 전에 실행(localStorage → 시스템 설정) */
@@ -121,31 +122,10 @@ export default async function LocaleLayout({
   return (
     <html lang={l} suppressHydrationWarning>
       <body className="min-h-screen flex flex-col">
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-NNL7XBXJ"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.dataLayer=window.dataLayer||[];window.dataLayer.push({language:"${l}"});document.addEventListener("click",function(e){var t=e.target;var a=t&&t.closest?t.closest('a[download],a[href^="blob:"]'):null;if(!a)return;window.dataLayer.push({event:"file_download",file_name:a.getAttribute("download")||"file",page_path:location.pathname});},true);`,
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});gtag('set','ads_data_redaction',true);window.dataLayer.push({language:"${l}"});document.addEventListener("click",function(e){var t=e.target;var a=t&&t.closest?t.closest('a[download],a[href^="blob:"]'):null;if(!a)return;window.dataLayer.push({event:"file_download",file_name:a.getAttribute("download")||"file",page_path:location.pathname});},true);`,
           }}
-        />
-        <Script
-          id="gtm-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html:
-              "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());",
-          }}
-        />
-        <Script
-          id="gtm-script"
-          src="https://www.googletagmanager.com/gtm.js?id=GTM-NNL7XBXJ"
-          strategy="afterInteractive"
         />
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -267,12 +247,16 @@ export default async function LocaleLayout({
             </div>
             <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-hairline/60 pt-6 text-[14px] text-muted">
               <span>{d.foot.rights}</span>
-              <a href={`/${l}/privacy`} className="text-muted transition-colors hover:text-primary">
-                {d.foot.privacy}
-              </a>
+              <div className="flex items-center gap-4">
+                <CookieSettingsButton label={d.consent.settings} />
+                <a href={`/${l}/privacy`} className="text-muted transition-colors hover:text-primary">
+                  {d.foot.privacy}
+                </a>
+              </div>
             </div>
           </div>
         </footer>
+        <CookieConsent locale={l} strings={d.consent} />
       </body>
     </html>
   );

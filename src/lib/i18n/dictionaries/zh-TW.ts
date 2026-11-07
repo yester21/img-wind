@@ -261,6 +261,13 @@ const zhTW: Dict = {
   navBlog: "部落格",
   navMore: "全部工具",
   lang: { label: "語言" },
+  consent: {
+    title: "Cookie 與分析",
+    desc: "我們使用 Cookie 與分析工具來改善服務。拒絕後仍可使用全部功能。",
+    accept: "同意",
+    reject: "拒絕",
+    settings: "Cookie 設定",
+  },
 };
 
 export default zhTW;

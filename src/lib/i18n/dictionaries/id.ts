@@ -261,6 +261,13 @@ const id: Dict = {
   navBlog: "Blog",
   navMore: "Semua alat",
   lang: { label: "Bahasa" },
+  consent: {
+    title: "Cookie dan analitik",
+    desc: "Kami menggunakan cookie dan alat analitik untuk meningkatkan layanan. Semua fitur tetap bisa dipakai meski menolak.",
+    accept: "Setuju",
+    reject: "Tolak",
+    settings: "Pengaturan cookie",
+  },
 };
 
 export default id;

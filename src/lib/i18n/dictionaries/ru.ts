@@ -261,6 +261,13 @@ const ru: Dict = {
   navBlog: "Блог",
   navMore: "Все инструменты",
   lang: { label: "Язык" },
+  consent: {
+    title: "Файлы cookie и аналитика",
+    desc: "Мы используем cookie и аналитику для улучшения сервиса. При отказе все функции остаются доступны.",
+    accept: "Принять",
+    reject: "Отклонить",
+    settings: "Настройки cookie",
+  },
 };
 
 export default ru;
