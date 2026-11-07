@@ -3,6 +3,7 @@ import WatermarkTool from "@/components/WatermarkTool";
 import { langAlternates, type Locale } from "@/lib/i18n/config";
 import { pageMetadata } from "@/lib/seo";
 import { getDictionary } from "@/lib/i18n";
+import ToolSeoContent from "@/components/ToolSeoContent";
 
 export async function generateMetadata({
   params,
@@ -21,5 +22,11 @@ export async function generateMetadata({
 
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  return <WatermarkTool d={getDictionary(locale)} />;
+  const l = locale as Locale;
+  return (
+    <>
+      <WatermarkTool d={getDictionary(l)} />
+      <ToolSeoContent locale={l} toolKey="wm" />
+    </>
+  );
 }

@@ -3,6 +3,7 @@ import MaskTool from "@/components/MaskTool";
 import { langAlternates, type Locale } from "@/lib/i18n/config";
 import { pageMetadata } from "@/lib/seo";
 import { getDictionary } from "@/lib/i18n";
+import ToolSeoContent from "@/components/ToolSeoContent";
 
 export async function generateMetadata({
   params,
@@ -21,5 +22,11 @@ export async function generateMetadata({
 
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  return <MaskTool d={getDictionary(locale)} />;
+  const l = locale as Locale;
+  return (
+    <>
+      <MaskTool d={getDictionary(l)} />
+      <ToolSeoContent locale={l} toolKey="maskT" />
+    </>
+  );
 }
