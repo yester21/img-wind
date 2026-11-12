@@ -90,11 +90,13 @@ const zhTW: Dict = {
   },
   compress: {
     title: "圖片壓縮",
+    h1: "圖片壓縮",
     desc: "在保持畫面品質的同時縮小檔案體積。可自選品質或指定目標大小。",
     mode: "壓縮方式",
   },
   convert: {
     title: "格式轉換",
+    h1: "圖片轉檔（WebP·JPG·PNG·HEIC）",
     desc: "將圖片轉換為 JPEG、PNG、WebP 或 AVIF。透明背景處理也可調整。",
     pick: "轉換目標格式",
     hints: {
@@ -109,6 +111,7 @@ const zhTW: Dict = {
   },
   resize: {
     title: "尺寸調整",
+    h1: "圖片縮小·調整尺寸",
     desc: "依像素、比例或最大尺寸批次調整多張圖片，始終保持原始寬高比。",
     mode: "調整方式",
     modes: { pixels: "像素", percent: "比例(%)", fit: "最大尺寸" },
@@ -125,6 +128,7 @@ const zhTW: Dict = {
   },
   allin: {
     title: "全能處理",
+    h1: "圖片批次壓縮·轉檔·縮小",
     desc: "一次完成壓縮、格式轉換與尺寸調整。未設定的項目保持原樣。",
     formatStep: "① 格式轉換",
     formatBase: "預設：保持原格式",
@@ -159,6 +163,7 @@ const zhTW: Dict = {
   },
   topdf: {
     title: "圖片 → PDF",
+    h1: "JPG轉PDF",
     desc: "將多張圖片依順序合併為一個 PDF - 證件、合約提交利器，全程在瀏覽器中完成，無需上傳。",
     page: "頁面大小",
     a4: "符合 A4",
@@ -173,6 +178,7 @@ const zhTW: Dict = {
   },
   pdfimg: {
     title: "PDF → 圖片",
+    h1: "PDF轉JPG",
     desc: "將 PDF 每一頁轉換為 PNG/JPEG 圖片並打包 ZIP 下載 - 全程在瀏覽器中完成。",
     pick: "選擇 PDF 檔案",
     hint: "僅支援 PDF - 所有頁面都會轉換為圖片",
@@ -183,6 +189,7 @@ const zhTW: Dict = {
   },
   fav: {
     title: "網站圖示產生器",
+    h1: "Favicon產生器",
     desc: "用一張圖片產生全套網站圖示/應用程式圖示尺寸，打包 ZIP 下載。",
     sizes: "產生尺寸",
     note: "將獲得所選尺寸的 PNG 以及 favicon.ico 的 ZIP 壓縮包。",
@@ -191,6 +198,7 @@ const zhTW: Dict = {
   },
   crop: {
     title: "裁切與旋轉",
+    h1: "圖片裁切·旋轉",
     desc: "裁切所需區域，並對多張圖片批次套用 90° 旋轉與翻轉。",
     area: "裁切區域 - 在預覽圖上拖曳",
     ratio: "比例",
@@ -205,6 +213,7 @@ const zhTW: Dict = {
   },
   wm: {
     title: "浮水印",
+    h1: "圖片加浮水印",
     desc: "為多張圖片批次加入文字或 Logo 浮水印。可調整位置、大小與透明度。",
     preview: "預覽（第一張）",
     type: "類型",
@@ -226,6 +235,7 @@ const zhTW: Dict = {
   },
   maskT: {
     title: "模糊與馬賽克",
+    h1: "圖片馬賽克·模糊",
     desc: "對人臉、地址等隱私區域進行模糊或馬賽克處理，可指定多個區域。",
     regions: "要遮住的區域 - 在預覽圖上拖曳",
     hint: "拖曳新增區域，點擊 × 按鈕刪除。",
@@ -236,6 +246,7 @@ const zhTW: Dict = {
   },
   ocr: {
     title: "圖片 → 文字",
+    h1: "圖片轉文字（OCR）",
     desc: "直接在瀏覽器中擷取圖片中的文字（OCR）。可複製截圖和照片中的文字。",
     langs: "辨識語言",
     ko: "韓語",
@@ -252,6 +263,7 @@ const zhTW: Dict = {
   },
   bg: {
     title: "背景去除",
+    h1: "線上去背",
     desc: "AI 自動去除圖片背景，辨識人物或物體並輸出透明 PNG。",
     run: "去除背景",
     removing: "處理中…",

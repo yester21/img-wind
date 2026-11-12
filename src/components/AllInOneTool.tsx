@@ -63,7 +63,7 @@ export default function AllInOneTool({ d }: { d: Dict }) {
 
   return (
     <>
-      <ToolHeader title={a.title} desc={a.desc} />
+      <ToolHeader title={a.h1} desc={a.desc} />
       <Dropzone onFiles={tool.addFiles} disabled={tool.running} d={d} />
       <ToolShell tool={tool} d={d}>
         <section className="card mt-6 p-6 space-y-6">

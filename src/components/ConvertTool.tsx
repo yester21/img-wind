@@ -34,7 +34,7 @@ export default function ConvertTool({
 
   return (
     <>
-      <ToolHeader title={title ?? d.convert.title} desc={desc ?? d.convert.desc} />
+      <ToolHeader title={title ?? d.convert.h1} desc={desc ?? d.convert.desc} />
       <Dropzone onFiles={tool.addFiles} disabled={tool.running} d={d} />
       <ToolShell tool={tool} d={d}>
         <section className="card mt-6 p-6 space-y-5">
@@ -60,7 +60,7 @@ export default function ConvertTool({
                   >
                     {c.formats[f]}
                   </span>
-                  <span className="block mt-0.5 text-[12px] text-muted whitespace-nowrap tracking-[-0.02em]">{d.convert.hints[f]}</span>
+                  <span className="block mt-0.5 text-[12px] text-muted sm:whitespace-nowrap tracking-[-0.02em]">{d.convert.hints[f]}</span>
                 </button>
               ))}
             </div>

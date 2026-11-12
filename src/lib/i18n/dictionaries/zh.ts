@@ -90,11 +90,13 @@ const zh: Dict = {
   },
   compress: {
     title: "图片压缩",
+    h1: "图片压缩",
     desc: "在保持画面质量的同时减小文件体积。可自选质量或指定目标大小。",
     mode: "压缩方式",
   },
   convert: {
     title: "格式转换",
+    h1: "图片格式转换（WebP·JPG·PNG·HEIC）",
     desc: "将图片转换为 JPEG、PNG、WebP 或 AVIF。透明背景处理也可调整。",
     pick: "转换目标格式",
     hints: {
@@ -109,6 +111,7 @@ const zh: Dict = {
   },
   resize: {
     title: "尺寸调整",
+    h1: "图片尺寸修改",
     desc: "按像素、比例或最大尺寸批量调整多张图片，始终保持原始宽高比。",
     mode: "调整方式",
     modes: { pixels: "像素", percent: "比例(%)", fit: "最大尺寸" },
@@ -125,6 +128,7 @@ const zh: Dict = {
   },
   allin: {
     title: "全能处理",
+    h1: "图片批量压缩·转换·改尺寸",
     desc: "一次完成压缩、格式转换与尺寸调整。未设置的项保持原样。",
     formatStep: "① 格式转换",
     formatBase: "默认：保持原格式",
@@ -159,6 +163,7 @@ const zh: Dict = {
   },
   topdf: {
     title: "图片 → PDF",
+    h1: "JPG转PDF",
     desc: "将多张图片按顺序合并为一个 PDF - 证件、合同提交利器，全程在浏览器中完成，无需上传。",
     page: "页面大小",
     a4: "适配 A4",
@@ -173,6 +178,7 @@ const zh: Dict = {
   },
   pdfimg: {
     title: "PDF → 图片",
+    h1: "PDF转JPG",
     desc: "将 PDF 每一页转换为 PNG/JPEG 图片并打包 ZIP 下载 - 全程在浏览器中完成。",
     pick: "选择 PDF 文件",
     hint: "仅支持 PDF - 所有页面都会转换为图片",
@@ -183,6 +189,7 @@ const zh: Dict = {
   },
   fav: {
     title: "网站图标生成器",
+    h1: "Favicon生成器",
     desc: "用一张图片生成全套网站图标/应用图标尺寸，打包 ZIP 下载。",
     sizes: "生成尺寸",
     note: "将获得所选尺寸的 PNG 以及 favicon.ico 的 ZIP 包。",
@@ -191,6 +198,7 @@ const zh: Dict = {
   },
   crop: {
     title: "裁剪与旋转",
+    h1: "图片裁剪·旋转",
     desc: "裁剪所需区域，并对多张图片批量应用 90° 旋转与翻转。",
     area: "裁剪区域 - 在预览图上拖动",
     ratio: "比例",
@@ -205,6 +213,7 @@ const zh: Dict = {
   },
   wm: {
     title: "水印",
+    h1: "图片加水印",
     desc: "为多张图片批量添加文字或 Logo 水印。可调整位置、大小与透明度。",
     preview: "预览（第一张）",
     type: "类型",
@@ -226,6 +235,7 @@ const zh: Dict = {
   },
   maskT: {
     title: "模糊与马赛克",
+    h1: "图片打码·模糊",
     desc: "对人脸、地址等隐私区域进行模糊或马赛克处理，可指定多个区域。",
     regions: "要遮挡的区域 - 在预览图上拖动",
     hint: "拖动添加区域，点击 × 按钮删除。",
@@ -236,6 +246,7 @@ const zh: Dict = {
   },
   ocr: {
     title: "图片 → 文字",
+    h1: "图片转文字（OCR）",
     desc: "直接在浏览器中提取图片中的文字（OCR）。可复制截图和照片中的文字。",
     langs: "识别语言",
     ko: "韩语",
@@ -252,6 +263,7 @@ const zh: Dict = {
   },
   bg: {
     title: "背景去除",
+    h1: "在线抠图",
     desc: "AI 自动去除图片背景，识别人物或物体并输出透明 PNG。",
     run: "去除背景",
     removing: "处理中…",

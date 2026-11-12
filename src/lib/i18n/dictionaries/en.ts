@@ -92,11 +92,13 @@ const en: Dict = {
   },
   compress: {
     title: "Compress images",
+    h1: "Compress Images",
     desc: "Shrink file size while keeping on-screen quality. Choose a quality level or set a target size.",
     mode: "Compression mode",
   },
   convert: {
     title: "Convert format",
+    h1: "Image Converter (WebP, JPG, PNG, HEIC)",
     desc: "Convert images to JPEG, PNG, WebP or AVIF. Transparency handling is adjustable too.",
     pick: "Convert to",
     hints: {
@@ -111,6 +113,7 @@ const en: Dict = {
   },
   resize: {
     title: "Resize images",
+    h1: "Resize Images",
     desc: "Batch-resize many images by pixels, percentage or max size - always preserving the original aspect ratio.",
     mode: "Resize mode",
     modes: { pixels: "Pixels", percent: "Percent", fit: "Max size" },
@@ -128,6 +131,7 @@ const en: Dict = {
   },
   allin: {
     title: "All-in-one",
+    h1: "Bulk Compress, Convert & Resize Images",
     desc: "Apply compression, format conversion and resizing in a single pass. Unset options keep the original.",
     formatStep: "1. Format conversion",
     formatBase: "Default: keep original",
@@ -162,6 +166,7 @@ const en: Dict = {
   },
   topdf: {
     title: "Image → PDF",
+    h1: "JPG to PDF Converter",
     desc: "Combine multiple images into a single PDF in order - certificates, contracts and more. Built in your browser, no uploads.",
     page: "Page size",
     a4: "Fit to A4",
@@ -176,6 +181,7 @@ const en: Dict = {
   },
   pdfimg: {
     title: "PDF → Image",
+    h1: "PDF to JPG Converter",
     desc: "Convert each PDF page to PNG or JPEG images and download them as a ZIP - right in your browser.",
     pick: "Choose a PDF file",
     hint: "PDF only - every page is converted to an image",
@@ -186,6 +192,7 @@ const en: Dict = {
   },
   fav: {
     title: "Favicon generator",
+    h1: "Favicon Generator",
     desc: "Create a full favicon/app-icon size set from one image and download it as a ZIP.",
     sizes: "Sizes to generate",
     note: "You'll get the selected PNG sizes plus favicon.ico in a ZIP.",
@@ -194,6 +201,7 @@ const en: Dict = {
   },
   crop: {
     title: "Crop & rotate",
+    h1: "Crop & Rotate Images",
     desc: "Crop an area and apply 90° rotation or flipping to many images at once.",
     area: "Crop area - drag on the preview",
     ratio: "Ratio",
@@ -209,6 +217,7 @@ const en: Dict = {
   },
   wm: {
     title: "Watermark",
+    h1: "Add Watermark to Photos",
     desc: "Batch-apply a text or logo watermark to many images. Adjust position, size and opacity.",
     preview: "Preview (first image)",
     type: "Type",
@@ -230,6 +239,7 @@ const en: Dict = {
   },
   maskT: {
     title: "Blur & pixelate",
+    h1: "Blur & Pixelate Images",
     desc: "Hide faces, addresses or any private area with blur or pixelation. Multiple regions supported.",
     regions: "Areas to hide - drag on the preview",
     hint: "Drag to add an area, click its × button to remove it.",
@@ -240,6 +250,7 @@ const en: Dict = {
   },
   ocr: {
     title: "Image → Text",
+    h1: "Image to Text (OCR)",
     desc: "Extract text from images right in your browser (OCR). Copy text from screenshots and photos.",
     langs: "Recognition languages",
     ko: "Korean",
@@ -256,6 +267,7 @@ const en: Dict = {
   },
   bg: {
     title: "Background remover",
+    h1: "Remove Background from Image",
     desc: "Remove image backgrounds automatically with AI - subjects become transparent PNGs.",
     run: "Remove background",
     removing: "Removing…",

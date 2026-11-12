@@ -83,7 +83,7 @@ export default function BgRemoveTool({ d }: { d: Dict }) {
 
   return (
     <>
-      <ToolHeader title={t.title} desc={t.desc} />
+      <ToolHeader title={t.h1} desc={t.desc} />
       <Dropzone onFiles={addFiles} disabled={running} d={d} />
 
       {items.length > 0 && (

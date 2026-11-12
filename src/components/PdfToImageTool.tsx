@@ -77,7 +77,7 @@ export default function PdfToImageTool({ d }: { d: Dict }) {
 
   return (
     <>
-      <ToolHeader title={t.title} desc={t.desc} />
+      <ToolHeader title={t.h1} desc={t.desc} />
 
       <div className="card border-2 border-dashed py-14 px-6 text-center">
         <svg

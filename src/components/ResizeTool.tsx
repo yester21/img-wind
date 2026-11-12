@@ -53,7 +53,7 @@ export default function ResizeTool({ d }: { d: Dict }) {
 
   return (
     <>
-      <ToolHeader title={r.title} desc={r.desc} />
+      <ToolHeader title={r.h1} desc={r.desc} />
       <Dropzone onFiles={tool.addFiles} disabled={tool.running} d={d} />
       <ToolShell tool={tool} d={d}>
         <section className="card mt-6 p-6 space-y-5">

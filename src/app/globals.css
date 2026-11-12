@@ -208,3 +208,9 @@ input[type="radio"] {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+/* break-keep(keep-all)은 띄어쓰기에서만 줄을 바꾸는 한국어용 — 띄어쓰기가 없는 일본어·중국어·태국어에선
+   줄바꿈이 막혀 모바일에서 가로로 넘친다. 해당 언어에서는 일반 줄바꿈으로 되돌린다. */
+:is(:lang(ja), :lang(zh), :lang(th)) .break-keep {
+  word-break: normal;
+}

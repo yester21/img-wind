@@ -32,7 +32,7 @@ export default function MaskTool({ d }: { d: Dict }) {
 
   return (
     <>
-      <ToolHeader title={t.title} desc={t.desc} />
+      <ToolHeader title={t.h1} desc={t.desc} />
       <Dropzone onFiles={tool.addFiles} disabled={tool.running} d={d} />
       <ToolShell tool={tool} d={d}>
         <section className="card mt-6 p-6 space-y-5">

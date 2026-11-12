@@ -27,7 +27,7 @@ export default function CompressTool({ d }: { d: Dict }) {
 
   return (
     <>
-      <ToolHeader title={d.compress.title} desc={d.compress.desc} />
+      <ToolHeader title={d.compress.h1} desc={d.compress.desc} />
       <Dropzone onFiles={tool.addFiles} disabled={tool.running} d={d} />
       <ToolShell tool={tool} d={d}>
         <section className="card mt-6 p-6 space-y-5">

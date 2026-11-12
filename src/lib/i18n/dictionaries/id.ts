@@ -90,11 +90,13 @@ const id: Dict = {
   },
   compress: {
     title: "Kompres gambar",
+    h1: "Kompres Foto",
     desc: "Perkecil ukuran file tanpa mengurangi kualitas tampilan. Pilih kualitas atau tetapkan ukuran target.",
     mode: "Mode kompresi",
   },
   convert: {
     title: "Konversi format",
+    h1: "Ubah Format Gambar (WebP, JPG, PNG, HEIC)",
     desc: "Konversi gambar ke JPEG, PNG, WebP, atau AVIF. Latar transparan juga bisa diatur.",
     pick: "Konversi ke",
     hints: {
@@ -109,6 +111,7 @@ const id: Dict = {
   },
   resize: {
     title: "Ubah ukuran",
+    h1: "Ubah Ukuran Foto",
     desc: "Ubah ukuran banyak gambar sekaligus berdasarkan piksel, persentase, atau ukuran maksimum - rasio aspek selalu terjaga.",
     mode: "Mode ubah ukuran",
     modes: { pixels: "Piksel", percent: "Persen", fit: "Ukuran maks" },
@@ -125,6 +128,7 @@ const id: Dict = {
   },
   allin: {
     title: "Serba bisa",
+    h1: "Kompres, Ubah Format & Ukuran Sekaligus",
     desc: "Terapkan kompresi, konversi format, dan pengubahan ukuran sekaligus. Opsi yang tidak diatur tetap asli.",
     formatStep: "1. Konversi format",
     formatBase: "Bawaan: pertahankan asli",
@@ -159,6 +163,7 @@ const id: Dict = {
   },
   topdf: {
     title: "Gambar → PDF",
+    h1: "JPG ke PDF",
     desc: "Gabungkan beberapa gambar menjadi satu PDF secara berurutan - untuk sertifikat dan kontrak. Dibuat di browser tanpa unggah.",
     page: "Ukuran halaman",
     a4: "Sesuaikan A4",
@@ -173,6 +178,7 @@ const id: Dict = {
   },
   pdfimg: {
     title: "PDF → Gambar",
+    h1: "PDF ke JPG",
     desc: "Konversi setiap halaman PDF menjadi gambar PNG/JPEG dan unduh sebagai ZIP - langsung di browser.",
     pick: "Pilih file PDF",
     hint: "Hanya PDF - semua halaman dikonversi menjadi gambar",
@@ -183,6 +189,7 @@ const id: Dict = {
   },
   fav: {
     title: "Generator favicon",
+    h1: "Favicon Generator",
     desc: "Buat set ukuran favicon/ikon aplikasi lengkap dari satu gambar, unduh sebagai ZIP.",
     sizes: "Ukuran yang dibuat",
     note: "Anda mendapatkan PNG sesuai ukuran terpilih plus favicon.ico dalam ZIP.",
@@ -191,6 +198,7 @@ const id: Dict = {
   },
   crop: {
     title: "Potong & putar",
+    h1: "Crop & Putar Foto",
     desc: "Potong area yang diinginkan dan terapkan rotasi 90°/pembalikan ke banyak gambar sekaligus.",
     area: "Area potong - seret di pratinjau",
     ratio: "Rasio",
@@ -205,6 +213,7 @@ const id: Dict = {
   },
   wm: {
     title: "Watermark",
+    h1: "Watermark Foto",
     desc: "Terapkan watermark teks atau logo secara massal. Atur posisi, ukuran, dan opasitas.",
     preview: "Pratinjau (gambar pertama)",
     type: "Jenis",
@@ -226,6 +235,7 @@ const id: Dict = {
   },
   maskT: {
     title: "Blur & pikselasi",
+    h1: "Blur Foto",
     desc: "Sembunyikan wajah, alamat, atau area pribadi dengan blur atau pikselasi. Beberapa area didukung.",
     regions: "Area yang disembunyikan - seret di pratinjau",
     hint: "Seret untuk menambah area, klik tombol × untuk menghapus.",
@@ -236,6 +246,7 @@ const id: Dict = {
   },
   ocr: {
     title: "Gambar → Teks",
+    h1: "Gambar ke Teks (OCR)",
     desc: "Ekstrak teks dari gambar langsung di browser (OCR). Salin teks dari tangkapan layar dan foto.",
     langs: "Bahasa pengenalan",
     ko: "Korea",
@@ -252,6 +263,7 @@ const id: Dict = {
   },
   bg: {
     title: "Penghapus latar",
+    h1: "Hapus Background",
     desc: "Hapus latar belakang gambar otomatis dengan AI - subjek menjadi PNG transparan.",
     run: "Hapus latar",
     removing: "Menghapus…",

@@ -89,7 +89,7 @@ export default function FaviconTool({ d }: { d: Dict }) {
 
   return (
     <>
-      <ToolHeader title={t.title} desc={t.desc} />
+      <ToolHeader title={t.h1} desc={t.desc} />
       {file ? (
         <div className="card p-6 flex flex-col sm:flex-row items-center gap-6">
           {preview && (
