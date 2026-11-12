@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { langAlternates, type Locale } from "@/lib/i18n/config";
 import { pageMetadata } from "@/lib/seo";
+import { seoFor } from "@/lib/i18n/seoMeta";
 import { privacyContent } from "@/lib/i18n/privacy";
 
 export async function generateMetadata({
@@ -10,7 +11,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const p = privacyContent[(locale as Locale) in privacyContent ? (locale as Locale) : "ko"];
-  return pageMetadata({ locale: locale as Locale, path: "/privacy", title: p.title, description: p.kicker });
+  const seo = seoFor(locale as Locale, "privacy", { title: p.title, desc: p.kicker });
+  return pageMetadata({ locale: locale as Locale, path: "/privacy", title: seo.title, description: seo.desc });
 }
 
 export default async function PrivacyPage({ params }: { params: Promise<{ locale: string }> }) {

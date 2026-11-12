@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import MaskTool from "@/components/MaskTool";
 import { langAlternates, type Locale } from "@/lib/i18n/config";
 import { pageMetadata } from "@/lib/seo";
+import { seoMetadataText } from "@/lib/i18n/seoMeta";
 import { getDictionary } from "@/lib/i18n";
 import ToolSeoContent from "@/components/ToolSeoContent";
 
@@ -15,8 +16,7 @@ export async function generateMetadata({
   return pageMetadata({
     locale: locale as Locale,
     path: "/mask",
-    title: d.maskT.title,
-    description: d.maskT.desc,
+    ...seoMetadataText(locale as Locale, "mask", d.maskT),
   });
 }
 

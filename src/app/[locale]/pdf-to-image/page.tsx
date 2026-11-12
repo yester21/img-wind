@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PdfToImageTool from "@/components/PdfToImageTool";
 import { langAlternates, type Locale } from "@/lib/i18n/config";
 import { pageMetadata } from "@/lib/seo";
+import { seoMetadataText } from "@/lib/i18n/seoMeta";
 import { getDictionary } from "@/lib/i18n";
 import ToolSeoContent from "@/components/ToolSeoContent";
 
@@ -15,8 +16,7 @@ export async function generateMetadata({
   return pageMetadata({
     locale: locale as Locale,
     path: "/pdf-to-image",
-    title: d.pdfimg.title,
-    description: d.pdfimg.desc,
+    ...seoMetadataText(locale as Locale, "pdfimg", d.pdfimg),
   });
 }
 

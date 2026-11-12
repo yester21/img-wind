@@ -11,8 +11,21 @@ import { MIME, type OutputFormat } from "@/lib/types";
 type ConvFormat = Exclude<OutputFormat, "keep">;
 const CONV_KEYS: ConvFormat[] = ["jpeg", "png", "webp", "avif"];
 
-export default function ConvertTool({ d }: { d: Dict }) {
-  const tool = useImageTool("convert", { format: "webp" });
+export type { ConvFormat };
+
+/** title/desc/initialFormat: 포맷 조합 전용 페이지(/webp-to-jpg 등)에서 제목과 시작 포맷을 바꿔 쓴다 */
+export default function ConvertTool({
+  d,
+  initialFormat = "webp",
+  title,
+  desc,
+}: {
+  d: Dict;
+  initialFormat?: ConvFormat;
+  title?: string;
+  desc?: string;
+}) {
+  const tool = useImageTool("convert", { format: initialFormat });
   const { options, update } = tool;
   const lossy = options.format !== "png";
   const c = d.common;
@@ -21,7 +34,7 @@ export default function ConvertTool({ d }: { d: Dict }) {
 
   return (
     <>
-      <ToolHeader title={d.convert.title} desc={d.convert.desc} />
+      <ToolHeader title={title ?? d.convert.title} desc={desc ?? d.convert.desc} />
       <Dropzone onFiles={tool.addFiles} disabled={tool.running} d={d} />
       <ToolShell tool={tool} d={d}>
         <section className="card mt-6 p-6 space-y-5">

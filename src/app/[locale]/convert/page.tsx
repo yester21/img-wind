@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import ConvertTool from "@/components/ConvertTool";
 import { langAlternates, type Locale } from "@/lib/i18n/config";
 import { pageMetadata } from "@/lib/seo";
+import { seoMetadataText } from "@/lib/i18n/seoMeta";
 import { getDictionary } from "@/lib/i18n";
 import ToolSeoContent from "@/components/ToolSeoContent";
+import { FormatPairLinks } from "@/components/FormatPairPage";
 
 export async function generateMetadata({
   params,
@@ -15,8 +17,7 @@ export async function generateMetadata({
   return pageMetadata({
     locale: locale as Locale,
     path: "/convert",
-    title: d.convert.title,
-    description: d.convert.desc,
+    ...seoMetadataText(locale as Locale, "convert", d.convert),
   });
 }
 
@@ -26,6 +27,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   return (
     <>
       <ConvertTool d={getDictionary(l)} />
+      <FormatPairLinks locale={l} />
       <ToolSeoContent locale={l} toolKey="convert" />
     </>
   );

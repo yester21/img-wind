@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import OcrTool from "@/components/OcrTool";
 import { langAlternates, type Locale } from "@/lib/i18n/config";
 import { pageMetadata } from "@/lib/seo";
+import { seoMetadataText } from "@/lib/i18n/seoMeta";
 import { getDictionary } from "@/lib/i18n";
 import ToolSeoContent from "@/components/ToolSeoContent";
 
@@ -15,8 +16,7 @@ export async function generateMetadata({
   return pageMetadata({
     locale: locale as Locale,
     path: "/ocr",
-    title: d.ocr.title,
-    description: d.ocr.desc,
+    ...seoMetadataText(locale as Locale, "ocr", d.ocr),
   });
 }
 

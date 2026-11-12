@@ -3,6 +3,7 @@ import Link from "next/link";
 import { langAlternates, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n";
 import { pageMetadata } from "@/lib/seo";
+import { seoFor } from "@/lib/i18n/seoMeta";
 import { TOOL_ACCENTS, TOOL_ICONS } from "@/components/toolIcons";
 
 export async function generateMetadata({
@@ -12,13 +13,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const d = getDictionary(locale);
+  const seo = seoFor(locale as Locale, "home", { title: d.meta.titleDefault, desc: d.meta.desc });
   const meta = pageMetadata({
     locale: locale as Locale,
     path: "",
-    title: d.meta.titleDefault,
-    description: d.meta.desc,
+    title: seo.title,
+    description: seo.desc,
   });
-  return { ...meta, title: { absolute: d.meta.titleDefault } };
+  return { ...meta, title: { absolute: seo.title } };
 }
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {

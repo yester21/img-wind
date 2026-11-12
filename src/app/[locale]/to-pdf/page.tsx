@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ToPdfTool from "@/components/ToPdfTool";
 import { langAlternates, type Locale } from "@/lib/i18n/config";
 import { pageMetadata } from "@/lib/seo";
+import { seoMetadataText } from "@/lib/i18n/seoMeta";
 import { getDictionary } from "@/lib/i18n";
 import ToolSeoContent from "@/components/ToolSeoContent";
 
@@ -15,8 +16,7 @@ export async function generateMetadata({
   return pageMetadata({
     locale: locale as Locale,
     path: "/to-pdf",
-    title: d.topdf.title,
-    description: d.topdf.desc,
+    ...seoMetadataText(locale as Locale, "topdf", d.topdf),
   });
 }
 
