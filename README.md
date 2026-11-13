@@ -208,6 +208,9 @@ px 고정 체계(루트 16px). 기존 10종을 **7단계**로 통일 — 13·15�
   워드프레스 첫 화면은 `Home`(page 4), 글 목록은 `블로그`(page 5) — 블로그 페이지를 첫 화면으로 지정하면 `/ko/blog/`가
   도구 홈 `/ko/`로 301 된다. 카테고리는 4개 묶음(팁·도구 활용·가이드·이미지 도구) × 8개 언어, 언어 없는 용어를 만들지 말 것.
   블로그 사이트맵은 mu-plugin `usepic-sitemap.php`(언어별 글·목록·해당 언어 카테고리, lastmod = 실제 수정일).
+  태그는 쓰지 않는다(2026-11-13): 글 템플릿(DP Single Post)에서 태그 블록 제거, mu-plugin `usepic-no-tags.php`가
+  편집 화면에서 태그를 숨기고 태그 보관함을 noindex + 해당 언어 블로그 목록으로 301. 태그 데이터(190개)는 남겨 둠.
+  Bricks 템플릿 메타를 WP-CLI로 고칠 때는 `--user=<관리자>` 필요(로그인 사용자가 아니면 저장이 조용히 무시됨).
 - WP 자기 검사 요청(파일 편집기 저장 시 wp_scrape_key, 사이트 상태 루프백)은 `https://usepic.net/`이 Pages라 실패한다 →
   mu-plugin `usepic-loopback.php`가 해당 요청만 `wp.usepic.net`(127.0.0.1, 비밀 헤더)로 보낸다. 관리자 계정 `yester21`.
 
