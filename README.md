@@ -204,6 +204,10 @@ px 고정 체계(루트 16px). 기존 10종을 **7단계**로 통일 — 13·15�
   글이 0개면 Yoast 인덱스가 404 — 첫 글 발행 후 정상. 작성자·날짜 아카이브 끔.
 - 블로그 캐시: LiteSpeed Cache. 캐시 히트는 PHP를 안 거치므로 오리진 직접 접근 차단(301)은 `.htaccess` 최상단
   `usepic origin guard`(X-Usepic-Proxy 비밀 헤더 검사)에서 처리 — 비밀값 변경 시 wp-config·.htaccess·Worker 세 곳.
+- 블로그 다국어 SEO 점검(2026-11-13): KDR SEO는 hreflang을 출력하지 않으므로 **WPML hreflang(`seo.head_langs`)을 켜 둔다**.
+  워드프레스 첫 화면은 `Home`(page 4), 글 목록은 `블로그`(page 5) — 블로그 페이지를 첫 화면으로 지정하면 `/ko/blog/`가
+  도구 홈 `/ko/`로 301 된다. 카테고리는 4개 묶음(팁·도구 활용·가이드·이미지 도구) × 8개 언어, 언어 없는 용어를 만들지 말 것.
+  블로그 사이트맵은 mu-plugin `usepic-sitemap.php`(언어별 글·목록·해당 언어 카테고리, lastmod = 실제 수정일).
 - WP 자기 검사 요청(파일 편집기 저장 시 wp_scrape_key, 사이트 상태 루프백)은 `https://usepic.net/`이 Pages라 실패한다 →
   mu-plugin `usepic-loopback.php`가 해당 요청만 `wp.usepic.net`(127.0.0.1, 비밀 헤더)로 보낸다. 관리자 계정 `yester21`.
 
